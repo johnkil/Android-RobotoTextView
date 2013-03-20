@@ -16,14 +16,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_thin"
                     android:textSize="22sp"
                     android:text="Roboto Thin &amp; "/>
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_thin_italic"
@@ -36,14 +36,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_light"
                     android:textSize="22sp"
                     android:text="Roboto Light &amp; "/>
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_light_italic"
@@ -56,14 +56,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_regular"
                     android:textSize="22sp"
                     android:text="Roboto Regular &amp; "/>
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_italic"
@@ -76,14 +76,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_medium"
                     android:textSize="22sp"
                     android:text="Roboto Medium &amp; "/>
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_medium_italic"
@@ -96,14 +96,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_bold"
                     android:textSize="22sp"
                     android:text="Roboto Bold &amp; "/>
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_bold_italic"
@@ -116,14 +116,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_black"
                     android:textSize="22sp"
                     android:text="Roboto Black &amp; "/>
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_black_italic"
@@ -136,14 +136,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_condensed"
                     android:textSize="22sp"
                     android:text="Roboto Condensed &amp; "/>
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_condensed_italic"
@@ -156,14 +156,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_condensed_bold"
                     android:textSize="22sp"
                     android:text="Roboto Bold Condensed &amp; "/>
 
-            <com.devspark.robototextview.view.RobotoTextView
+            <com.devspark.robototextview.widget.RobotoTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:typeface="roboto_condensed_bold_italic"

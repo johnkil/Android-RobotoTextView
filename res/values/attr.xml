@@ -5,7 +5,7 @@
         <attr name="typeface"/>
     </declare-styleable>
 
-    <!-- Changing the attribute must be reflected in the com.devspark.textview.RobotoTextView -->
+    <!-- Changing the attribute must be reflected in the com.devspark.robototextview.widget.RobotoTextView -->
     <attr name="typeface" format="enum">
         <enum name="roboto_thin" value="0"/>
         <enum name="roboto_thin_italic" value="1"/>

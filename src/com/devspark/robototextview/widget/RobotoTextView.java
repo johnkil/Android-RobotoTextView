@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.devspark.robototextview.view;
+package com.devspark.robototextview.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -56,9 +56,9 @@ public class RobotoTextView extends TextView {
     private final static SparseArray<Typeface> mTypefaces = new SparseArray<Typeface>(16);
 
     /**
-     * Simple constructor to use when creating a view from code.
+     * Simple constructor to use when creating a widget from code.
      *
-     * @param context The Context the view is running in, through which it can
+     * @param context The Context the widget is running in, through which it can
      *                access the current theme, resources, etc.
      */
     public RobotoTextView(Context context) {
@@ -66,8 +66,8 @@ public class RobotoTextView extends TextView {
     }
 
     /**
-     * Constructor that is called when inflating a view from XML. This is called
-     * when a view is being constructed from an XML file, supplying attributes
+     * Constructor that is called when inflating a widget from XML. This is called
+     * when a widget is being constructed from an XML file, supplying attributes
      * that were specified in the XML file. This version uses a default style of
      * 0, so the only attribute values applied are those in the Context's Theme
      * and the given AttributeSet.
@@ -76,9 +76,9 @@ public class RobotoTextView extends TextView {
      * The method onFinishInflate() will be called after all children have been
      * added.
      *
-     * @param context The Context the view is running in, through which it can
+     * @param context The Context the widget is running in, through which it can
      *                access the current theme, resources, etc.
-     * @param attrs   The attributes of the XML tag that is inflating the view.
+     * @param attrs   The attributes of the XML tag that is inflating the widget.
      * @see #RobotoTextView(Context, AttributeSet, int)
      */
     public RobotoTextView(Context context, AttributeSet attrs) {
@@ -91,10 +91,10 @@ public class RobotoTextView extends TextView {
      * constructor of View allows subclasses to use their own base style when
      * they are inflating.
      *
-     * @param context  The Context the view is running in, through which it can
+     * @param context  The Context the widget is running in, through which it can
      *                 access the current theme, resources, etc.
-     * @param attrs    The attributes of the XML tag that is inflating the view.
-     * @param defStyle The default style to apply to this view. If 0, no style
+     * @param attrs    The attributes of the XML tag that is inflating the widget.
+     * @param defStyle The default style to apply to this widget. If 0, no style
      *                 will be applied (beyond what is included in the theme). This may
      *                 either be an attribute resource, whose value will be retrieved
      *                 from the current theme, or an explicit style resource.
@@ -108,8 +108,8 @@ public class RobotoTextView extends TextView {
     /**
      * Parse the attributes.
      *
-     * @param context The Context the view is running in, through which it can access the current theme, resources, etc.
-     * @param attrs   The attributes of the XML tag that is inflating the view.
+     * @param context The Context the widget is running in, through which it can access the current theme, resources, etc.
+     * @param attrs   The attributes of the XML tag that is inflating the widget.
      */
     private void parseAttributes(Context context, AttributeSet attrs) {
         TypedArray values = context.obtainStyledAttributes(attrs, R.styleable.RobotoTextView);
@@ -123,7 +123,7 @@ public class RobotoTextView extends TextView {
     /**
      * Obtain typeface.
      *
-     * @param context       The Context the view is running in, through which it can
+     * @param context       The Context the widget is running in, through which it can
      *                      access the current theme, resources, etc.
      * @param typefaceValue values ​​for the "typeface" attribute
      * @return Roboto {@link Typeface}
@@ -141,7 +141,7 @@ public class RobotoTextView extends TextView {
     /**
      * Create typeface from assets.
      *
-     * @param context       The Context the view is running in, through which it can
+     * @param context       The Context the widget is running in, through which it can
      *                      access the current theme, resources, etc.
      * @param typefaceValue values ​​for the "typeface" attribute
      * @return Roboto {@link Typeface}
