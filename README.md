@@ -23,6 +23,28 @@ Compatibility
 This library is compatible from API 1 (Android 1.0).
 
 
+Usage
+-----
+
+Sample layout with RobotoTextView:
+
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res/com.devspark.robototextview"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+             
+    <com.devspark.robototextview.widget.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:typeface="roboto_thin"
+            android:textSize="22sp"
+            android:text="Roboto Thin"/>
+</FrameLayout>
+```
+
+
 Developed By
 ------------
 * Evgeny Shishkin - <johnkil78@gmail.com>
