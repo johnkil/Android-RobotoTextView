@@ -50,6 +50,11 @@ public class RobotoTextView extends TextView {
     private final static int ROBOTO_CONDENSED_ITALIC = 13;
     private final static int ROBOTO_CONDENSED_BOLD = 14;
     private final static int ROBOTO_CONDENSED_BOLD_ITALIC = 15;
+    private final static int ROBOTOSLAB_THIN = 16;
+    private final static int ROBOTOSLAB_LIGHT = 17;
+    private final static int ROBOTOSLAB_REGULAR = 18;
+    private final static int ROBOTOSLAB_BOLD = 19;
+    
     /**
      * List of created typefaces for later reused.
      */
@@ -197,6 +202,18 @@ public class RobotoTextView extends TextView {
                 break;
             case ROBOTO_CONDENSED_BOLD_ITALIC:
                 typeface = Typeface.createFromAsset(context.getAssets(), "fonts/Roboto-BoldCondensedItalic.ttf");
+                break;
+            case ROBOTOSLAB_THIN:
+                typeface = Typeface.createFromAsset(context.getAssets(), "fonts/RobotoSlab-Thin.ttf");
+                break;
+            case ROBOTOSLAB_LIGHT:
+                typeface = Typeface.createFromAsset(context.getAssets(), "fonts/RobotoSlab-Light.ttf");
+                break;
+            case ROBOTOSLAB_REGULAR:
+                typeface = Typeface.createFromAsset(context.getAssets(), "fonts/RobotoSlab-Regular.ttf");
+                break;
+            case ROBOTOSLAB_BOLD:
+                typeface = Typeface.createFromAsset(context.getAssets(), "fonts/RobotoSlab-Bold.ttf");
                 break;
             default:
                 throw new IllegalArgumentException("Unknown `typeface` attribute value " + typefaceValue);

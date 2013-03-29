@@ -170,5 +170,57 @@
                     android:textSize="22sp"
                     android:text="Bold Condensed Italic"/>
         </LinearLayout>
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:typeface="robotoslab_thin"
+                    android:textSize="22sp"
+                    android:text="Roboto Slab Thin"/>
+            </LinearLayout>
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:typeface="robotoslab_light"
+                    android:textSize="22sp"
+                    android:text="Roboto Slab Light"/>
+        </LinearLayout>
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:typeface="robotoslab_regular"
+                    android:textSize="22sp"
+                    android:text="Roboto Slab Regular"/>
+        </LinearLayout>
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+            <com.devspark.robototextview.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:typeface="robotoslab_bold"
+                    android:textSize="22sp"
+                    android:text="Roboto Slab Bold"/>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
