@@ -50,6 +50,7 @@ public class RobotoTextView extends TextView {
     private final static int ROBOTO_CONDENSED_ITALIC = 13;
     private final static int ROBOTO_CONDENSED_BOLD = 14;
     private final static int ROBOTO_CONDENSED_BOLD_ITALIC = 15;
+    
     /**
      * List of created typefaces for later reused.
      */
@@ -112,12 +113,14 @@ public class RobotoTextView extends TextView {
      * @param attrs   The attributes of the XML tag that is inflating the widget.
      */
     private void parseAttributes(Context context, AttributeSet attrs) {
-        TypedArray values = context.obtainStyledAttributes(attrs, R.styleable.RobotoTextView);
+    	if (!isInEditMode()) {
+    		TypedArray values = context.obtainStyledAttributes(attrs, R.styleable.RobotoTextView);
 
-        int typefaceValue = values.getInt(R.styleable.RobotoTextView_typeface, 0);
-        values.recycle();
+        	int typefaceValue = values.getInt(R.styleable.RobotoTextView_typeface, 0);
+        	values.recycle();
 
-        setTypeface(obtaintTypeface(context, typefaceValue));
+        	setTypeface(obtaintTypeface(context, typefaceValue));
+    	}
     }
 
     /**
