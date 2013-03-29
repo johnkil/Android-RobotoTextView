@@ -23,6 +23,10 @@
         <enum name="roboto_condensed_italic" value="13"/>
         <enum name="roboto_condensed_bold" value="14"/>
         <enum name="roboto_condensed_bold_italic" value="15"/>
+        <enum name="robotoslab_thin" value="16"/>
+        <enum name="robotoslab_light" value="17"/>
+        <enum name="robotoslab_regular" value="18"/>
+        <enum name="robotoslab_bold" value="19"/>
     </attr>
 
 </resources>
