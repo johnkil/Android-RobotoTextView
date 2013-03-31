@@ -31,7 +31,7 @@ Sample layout with RobotoTextView:
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res/com.devspark.robototextview"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
              android:layout_width="match_parent"
              android:layout_height="match_parent">
              
@@ -67,4 +67,4 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
-[1]: http://i50.tinypic.com/etay2t.png
+[1]: http://i46.tinypic.com/b9dg69.png
