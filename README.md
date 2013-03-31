@@ -20,7 +20,7 @@ Application is available on Google Play:
 Compatibility
 -------------
 
-This library is compatible from API 1 (Android 1.0).
+This library is compatible from API 3 (Android 1.5).
 
 
 Usage
