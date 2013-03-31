@@ -1,51 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
     <title>Android-RobotoTextView by johnkil</title>
-  </head>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  </head>
   <body>
-    <a id="forkme_banner" href="https://github.com/johnkil/Android-RobotoTextView">View on GitHub</a>
-    <div class="shell">
 
       <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Android-RobotoTextView</h1>
-            <h2>Implementation of a TextView with native support for all the Roboto fonts on all versions of Android.</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
+        <h1>Android-RobotoTextView</h1>
+        <p>Implementation of a TextView with native support for all the Roboto fonts on all versions of Android.</p>
       </header>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/johnkil/Android-RobotoTextView/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/johnkil/Android-RobotoTextView/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+      <div id="banner">
+        <span id="logo"></span>
 
+        <a href="https://github.com/johnkil/Android-RobotoTextView" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/johnkil/Android-RobotoTextView/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/johnkil/Android-RobotoTextView/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
         <h1>Android-RobotoTextView</h1>
 
 <p>Implementation of a <a href="http://developer.android.com/reference/android/widget/TextView.html">TextView</a> with native support for all the <a href="http://developer.android.com/design/style/typography.html">Roboto</a> fonts on all versions of Android.</p>
@@ -54,14 +47,33 @@
 
 <p>Application is available on Google Play:</p>
 
-<p><a href="http://play.google.com/store/apps/details?id=com.devspark.robototextview">
-  <img alt="Get it on Google Play" src="http://www.android.com/images/brand/get_it_on_play_logo_small.png"></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=com.devspark.robototextview">
+  <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png"></a></p>
 
-<p><img src="http://i50.tinypic.com/etay2t.png" alt="screenshot"></p>
+<p><img src="http://i46.tinypic.com/b9dg69.png" alt="screenshot"></p>
 
 <h2>Compatibility</h2>
 
-<p>This library is compatible from API 1 (Android 1.0).</p>
+<p>This library is compatible from API 3 (Android 1.5).</p>
+
+<h2>Usage</h2>
+
+<p>Sample layout with RobotoTextView:</p>
+
+<div class="highlight"><pre><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;FrameLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+             <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
+             <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+             <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;com.devspark.robototextview.widget.RobotoTextView</span>
+            <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
+            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+            <span class="na">app:typeface=</span><span class="s">"roboto_thin"</span>
+            <span class="na">android:textSize=</span><span class="s">"22sp"</span>
+            <span class="na">android:text=</span><span class="s">"Roboto Thin"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/FrameLayout&gt;</span>
+</pre></div>
 
 <h2>Developed By</h2>
 
@@ -85,21 +97,22 @@ See the License for the specific language governing permissions and
 limitations under the License.
 </code></pre>
       </section>
-
       <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/johnkil">johnkil</a> can be found on <a href="https://github.com/johnkil/Android-RobotoTextView">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
+        <p>Project maintained by <a href="https://github.com/johnkil">johnkil</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
       </footer>
-
     </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-37227385-6");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
 
-    
   </body>
 </html>
