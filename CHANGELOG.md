@@ -2,6 +2,14 @@ Change Log
 ==========
 
 
+Version 1.2 *(2013-03-20)*
+--------------------------
+
+* Support brand new `Roboto Slab` typefaces by Google.
+* Use res-auto in namespace URI.
+* Fix: Do not try to use custom font in Eclipse Layout Editor.
+
+
 Version 1.1 *(2013-03-20)*
 --------------------------
 
