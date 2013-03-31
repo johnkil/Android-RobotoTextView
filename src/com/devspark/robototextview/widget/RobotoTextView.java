@@ -117,12 +117,16 @@ public class RobotoTextView extends TextView {
      * @param attrs   The attributes of the XML tag that is inflating the widget.
      */
     private void parseAttributes(Context context, AttributeSet attrs) {
-        TypedArray values = context.obtainStyledAttributes(attrs, R.styleable.RobotoTextView);
+    	// Typeface.createFromAsset doesn't work in the layout editor, so skipping.
+    	if (isInEditMode()) {
+    	    return;
+    	}
 
-        int typefaceValue = values.getInt(R.styleable.RobotoTextView_typeface, 0);
-        values.recycle();
+    	TypedArray values = context.obtainStyledAttributes(attrs, R.styleable.RobotoTextView);
+    	int typefaceValue = values.getInt(R.styleable.RobotoTextView_typeface, 0);
+    	values.recycle();
 
-        setTypeface(obtaintTypeface(context, typefaceValue));
+    	setTypeface(obtaintTypeface(context, typefaceValue));
     }
 
     /**
