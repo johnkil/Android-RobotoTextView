@@ -126,7 +126,7 @@ public class RobotoTextView extends TextView {
     	int typefaceValue = values.getInt(R.styleable.RobotoTextView_typeface, 0);
     	values.recycle();
 
-    	setTypeface(obtaintTypeface(context, typefaceValue));
+    	setTypeface(obtainTypeface(context, typefaceValue));
     }
 
     /**
@@ -138,7 +138,7 @@ public class RobotoTextView extends TextView {
      * @return Roboto {@link Typeface}
      * @throws IllegalArgumentException if unknown `typeface` attribute value.
      */
-    private Typeface obtaintTypeface(Context context, int typefaceValue) throws IllegalArgumentException {
+    private Typeface obtainTypeface(Context context, int typefaceValue) throws IllegalArgumentException {
         Typeface typeface = mTypefaces.get(typefaceValue);
         if (typeface == null) {
             typeface = createTypeface(context, typefaceValue);
