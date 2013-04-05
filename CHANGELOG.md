@@ -2,7 +2,7 @@ Change Log
 ==========
 
 
-Version 1.2 *(2013-03-20)*
+Version 1.2 *(2013-03-31)*
 --------------------------
 
 * Support brand new `Roboto Slab` typefaces by Google.
