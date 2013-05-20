@@ -1,7 +1,25 @@
 Android-RobotoTextView
 ======================
 
-Implementation of a [TextView](http://developer.android.com/reference/android/widget/TextView.html) with native support for all the [Roboto](http://developer.android.com/design/style/typography.html) fonts on all versions of Android.
+Implementation of a [TextView](http://developer.android.com/reference/android/widget/TextView.html) and all its direct/indirect subclasses with native support for the [Roboto](http://developer.android.com/design/style/typography.html) fonts, includes the brand new [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab) fonts.
+
+Implemented next views:
+
+* `RobotoTextView`
+* `RobotoAutoCompleteTextView`
+* `RobotoButton`
+* `RobotoCheckBox`
+* `RobotoCheckedTextView`
+* `RobotoChronometer`
+* `RobotoCompoundButton`
+* `RobotoDigitalClock`
+* `RobotoEditText`
+* `RobotoExtractEditText`
+* `RobotoMultiAutoCompleteTextView`
+* `RobotoRadioButton`
+* `RobotoSwitch`
+* `RobotoTextClock`
+* `RobotoToggleButton`
 
 
 Sample
@@ -43,6 +61,30 @@ Sample layout with RobotoTextView:
             android:text="Roboto Thin"/>
 </FrameLayout>
 ```
+
+Available values ​​for the `typeface` attribute:
+
+* roboto_thin
+* roboto_thin_italic
+* roboto_light
+* roboto_light_italic
+* roboto_regular
+* roboto_italic
+* roboto_medium
+* roboto_medium_italic
+* roboto_bold
+* roboto_bold_italic
+* roboto_black
+* roboto_black_italic
+* roboto_condensed
+* roboto_condensed_italic
+* roboto_condensed_bold
+* roboto_condensed_bold_italic
+* robotoslab_thin
+* robotoslab_light
+* robotoslab_regular
+* robotoslab_bold
+
 
 
 Developed By

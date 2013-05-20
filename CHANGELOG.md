@@ -2,6 +2,12 @@ Change Log
 ==========
 
 
+Version 1.3 *(2013-05-20)*
+--------------------------
+
+* Implemeted of direct/indirect subclasses of TextView with native support for the Roboto fonts (`RobotoAutoCompleteTextView`, `RobotoButton`, `RobotoCheckBox`, `RobotoCheckedTextView`, `RobotoChronometer`, `RobotoCompoundButton`, `RobotoDigitalClock`, `RobotoEditText`, `RobotoExtractEditText`, `RobotoMultiAutoCompleteTextView`, `RobotoRadioButton`, `RobotoSwitch`, `RobotoTextClock`, `RobotoToggleButton`).
+
+
 Version 1.2 *(2013-03-31)*
 --------------------------
 

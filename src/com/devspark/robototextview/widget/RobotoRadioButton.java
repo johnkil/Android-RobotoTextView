@@ -1,35 +1,19 @@
-/*
-* Copyright 2013 Evgeny Shishkin
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*     http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
-
 package com.devspark.robototextview.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.widget.RadioButton;
 import com.devspark.robototextview.R;
 import com.devspark.robototextview.RobotoTypefaceManager;
 
 /**
- * Implementation of a {@link TextView} with native support for all the Roboto fonts.
+ * Implementation of a {@link RadioButton} with native support for all the Roboto fonts.
  *
  * @author e.shishkin
  */
-public class RobotoTextView extends TextView {
+public class RobotoRadioButton extends RadioButton {
 
     /**
      * Simple constructor to use when creating a widget from code.
@@ -37,7 +21,7 @@ public class RobotoTextView extends TextView {
      * @param context The Context the widget is running in, through which it can
      *                access the current theme, resources, etc.
      */
-    public RobotoTextView(Context context) {
+    public RobotoRadioButton(Context context) {
         super(context);
         onInitTypeface(context, null, 0);
     }
@@ -56,9 +40,9 @@ public class RobotoTextView extends TextView {
      * @param context The Context the widget is running in, through which it can
      *                access the current theme, resources, etc.
      * @param attrs   The attributes of the XML tag that is inflating the widget.
-     * @see #RobotoTextView(Context, AttributeSet, int)
+     * @see #RobotoRadioButton(Context, android.util.AttributeSet, int)
      */
-    public RobotoTextView(Context context, AttributeSet attrs) {
+    public RobotoRadioButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         onInitTypeface(context, attrs, 0);
     }
@@ -75,9 +59,9 @@ public class RobotoTextView extends TextView {
      *                 will be applied (beyond what is included in the theme). This may
      *                 either be an attribute resource, whose value will be retrieved
      *                 from the current theme, or an explicit style resource.
-     * @see #RobotoTextView(Context, AttributeSet)
+     * @see #RobotoRadioButton(Context, AttributeSet)
      */
-    public RobotoTextView(Context context, AttributeSet attrs, int defStyle) {
+    public RobotoRadioButton(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         onInitTypeface(context, attrs, defStyle);
     }
