@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.devspark.robototextview;
+package com.devspark.robototextviewsample;
 
 import android.app.Activity;
 import android.os.Bundle;

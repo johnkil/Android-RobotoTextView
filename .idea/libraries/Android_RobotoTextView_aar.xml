@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Android-RobotoTextView.aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Android-RobotoTextViewSample/build/exploded-bundles/Android-RobotoTextView.aar/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Android-RobotoTextViewSample/build/exploded-bundles/Android-RobotoTextView.aar/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
