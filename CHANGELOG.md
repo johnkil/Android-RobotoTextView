@@ -2,6 +2,14 @@ Change Log
 ==========
 
 
+Version 1.4 *(2013-08-11)*
+--------------------------
+
+* Support brand new `Roboto` typefaces from Android 4.3 ([info](http://www.androidpolice.com/2013/06/29/typeface-teardown-roboto-gets-a-facelift-in-android-4-3/)).
+* Add Gradle build.
+* Fix: #14 RobotoMultiAutoCompleteTextView inheritance.
+
+
 Version 1.3 *(2013-05-20)*
 --------------------------
 
