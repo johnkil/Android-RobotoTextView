@@ -4,15 +4,17 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
+import android.widget.MultiAutoCompleteTextView;
+
 import com.devspark.robototextview.R;
 import com.devspark.robototextview.RobotoTypefaceManager;
 
 /**
- * Implementation of a {@link RobotoAutoCompleteTextView} with native support for all the Roboto fonts.
+ * Implementation of a {@link MultiAutoCompleteTextView} with native support for all the Roboto fonts.
  *
  * @author e.shishkin
  */
-public class RobotoMultiAutoCompleteTextView extends RobotoAutoCompleteTextView {
+public class RobotoMultiAutoCompleteTextView extends MultiAutoCompleteTextView {
 
     /**
      * Simple constructor to use when creating a widget from code.
