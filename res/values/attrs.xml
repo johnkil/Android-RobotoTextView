@@ -75,14 +75,16 @@
         <enum name="roboto_bold_italic" value="9"/>
         <enum name="roboto_black" value="10"/>
         <enum name="roboto_black_italic" value="11"/>
-        <enum name="roboto_condensed" value="12"/>
-        <enum name="roboto_condensed_italic" value="13"/>
-        <enum name="roboto_condensed_bold" value="14"/>
-        <enum name="roboto_condensed_bold_italic" value="15"/>
-        <enum name="robotoslab_thin" value="16"/>
-        <enum name="robotoslab_light" value="17"/>
-        <enum name="robotoslab_regular" value="18"/>
-        <enum name="robotoslab_bold" value="19"/>
+        <enum name="roboto_condensed_light" value="12"/>
+        <enum name="roboto_condensed_light_italic" value="13"/>
+        <enum name="roboto_condensed_regular" value="14"/>
+        <enum name="roboto_condensed_italic" value="15"/>
+        <enum name="roboto_condensed_bold" value="16"/>
+        <enum name="roboto_condensed_bold_italic" value="17"/>
+        <enum name="roboto_slab_thin" value="18"/>
+        <enum name="roboto_slab_light" value="19"/>
+        <enum name="roboto_slab_regular" value="20"/>
+        <enum name="roboto_slab_bold" value="21"/>
     </attr>
 
 </resources>
