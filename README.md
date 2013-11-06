@@ -47,7 +47,6 @@ Usage
 Sample layout with RobotoTextView:
 
 ``` xml
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto"
              android:layout_width="match_parent"
@@ -76,14 +75,16 @@ Available values ​​for the `typeface` attribute:
 * roboto_bold_italic
 * roboto_black
 * roboto_black_italic
-* roboto_condensed
+* roboto_condensed_light
+* roboto_condensed_light_italic
+* roboto_condensed_regular
 * roboto_condensed_italic
 * roboto_condensed_bold
 * roboto_condensed_bold_italic
-* robotoslab_thin
-* robotoslab_light
-* robotoslab_regular
-* robotoslab_bold
+* roboto_slab_thin
+* roboto_slab_light
+* roboto_slab_regular
+* roboto_slab_bold
 
 
 
