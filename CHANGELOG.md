@@ -2,6 +2,13 @@ Change Log
 ==========
 
 
+Version 1.5 *(2013-11-06)*
+--------------------------
+
+* Support brand new `Roboto Condensed` font from Android 4.4 ([info](http://www.theverge.com/2013/10/31/5049672/android-kit-kat-4-4-google-software-operating-system)).
+* Update Gradle build (support gradle v 1.8).
+
+
 Version 1.4 *(2013-08-11)*
 --------------------------
 
