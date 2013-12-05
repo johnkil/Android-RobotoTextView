@@ -2,23 +2,23 @@ buildscript {
     repositories {
         mavenCentral()
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:0.6.+'
     }
 }
 
-apply plugin: 'android'
+def isReleaseBuild() {
+    return version.contains("SNAPSHOT") == false
+}
 
-android {
-    compileSdkVersion 19
-    buildToolsVersion '19.0.0'
+allprojects {
+    version = VERSION_NAME
+    group = GROUP
 
-    sourceSets {
-        main {
-            manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            res.srcDirs = ['res']
-            assets.srcDirs = ['assets']
-        }
+    repositories {
+        mavenCentral()
     }
 }
+
+apply plugin: 'android-reporting'

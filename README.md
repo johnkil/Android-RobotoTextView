@@ -87,6 +87,21 @@ Available values ​​for the `typeface` attribute:
 * roboto_slab_bold
 
 
+Gradle
+------
+
+Android-RobotoTextView library is now pushed to Maven Central as a AAR, so you just need to add the following dependency to your build.gradle.
+
+``` xml
+dependencies {
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.0.0'
+}
+```
+
+Example Gradle project using Android-RobotoTextView:
+
+* [Android-RobotoTextView-Gradle-Sample](https://github.com/johnkil/Android-RobotoTextView-Gradle-Sample)
+
 
 Developed By
 ------------
