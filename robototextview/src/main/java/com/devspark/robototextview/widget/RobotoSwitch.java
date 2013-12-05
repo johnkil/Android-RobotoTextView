@@ -23,6 +23,7 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.Switch;
+
 import com.devspark.robototextview.R;
 import com.devspark.robototextview.RobotoTypefaceManager;
 

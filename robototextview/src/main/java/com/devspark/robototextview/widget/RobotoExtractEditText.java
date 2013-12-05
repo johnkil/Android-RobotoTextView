@@ -21,6 +21,7 @@ import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.inputmethodservice.ExtractEditText;
 import android.util.AttributeSet;
+
 import com.devspark.robototextview.R;
 import com.devspark.robototextview.RobotoTypefaceManager;
 
