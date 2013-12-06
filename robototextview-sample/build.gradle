@@ -1,0 +1,15 @@
+apply plugin: 'android'
+
+dependencies {
+    compile project(':robototextview')
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
+
+    defaultConfig {
+        minSdkVersion 3
+        targetSdkVersion 19
+    }
+}

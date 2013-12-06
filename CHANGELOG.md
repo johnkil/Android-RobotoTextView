@@ -2,6 +2,13 @@ Change Log
 ==========
 
 
+Version 2.0.0 *(2013-12-05)*
+--------------------------
+
+* Separated sample from library project.
+* Pushed to Maven Central.
+
+
 Version 1.5 *(2013-11-06)*
 --------------------------
 
