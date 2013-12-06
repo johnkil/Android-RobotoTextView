@@ -1,44 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Android-RobotoTextView by johnkil</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Android-RobotoTextView : Implementation of a TextView and all its direct/indirect subclasses with native support for the Roboto fonts, includes the brand new Roboto Slab fonts." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Android-RobotoTextView</title>
   </head>
+
   <body>
 
-      <header>
-        <h1>Android-RobotoTextView</h1>
-        <p>Implementation of a TextView and all its direct/indirect subclasses with native support for the Roboto fonts, includes the brand new Roboto Slab fonts.</p>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/johnkil/Android-RobotoTextView">View on GitHub</a>
 
-      <div id="banner">
-        <span id="logo"></span>
+          <h1 id="project_title">Android-RobotoTextView</h1>
+          <h2 id="project_tagline">Implementation of a TextView and all its direct/indirect subclasses with native support for the Roboto fonts, includes the brand new Roboto Slab fonts.</h2>
 
-        <a href="https://github.com/johnkil/Android-RobotoTextView" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/johnkil/Android-RobotoTextView/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/johnkil/Android-RobotoTextView/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/johnkil/Android-RobotoTextView/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/johnkil/Android-RobotoTextView/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a name="android-robototextview" class="anchor" href="#android-robototextview"><span class="octicon octicon-link"></span></a>Android-RobotoTextView</h1>
 
@@ -90,9 +82,9 @@
     <span class="nt">&lt;com.devspark.robototextview.widget.RobotoTextView</span>
             <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
             <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
-            <span class="na">app:typeface=</span><span class="s">"roboto_thin"</span>
             <span class="na">android:textSize=</span><span class="s">"22sp"</span>
-            <span class="na">android:text=</span><span class="s">"Roboto Thin"</span><span class="nt">/&gt;</span>
+            <span class="na">android:text=</span><span class="s">"Roboto Thin"</span>
+            <span class="na">app:typeface=</span><span class="s">"roboto_thin"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/FrameLayout&gt;</span>
 </pre></div>
 
@@ -122,6 +114,20 @@
 <li>roboto_slab_regular</li>
 <li>roboto_slab_bold</li>
 </ul><h2>
+<a name="gradle" class="anchor" href="#gradle"><span class="octicon octicon-link"></span></a>Gradle</h2>
+
+<p>Android-RobotoTextView library is now pushed to Maven Central as a AAR, so you just need to add the following dependency to your build.gradle.</p>
+
+<div class="highlight highlight-xml"><pre>dependencies {
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.0.0'
+}
+</pre></div>
+
+<p>Example Gradle project using Android-RobotoTextView:</p>
+
+<ul>
+<li><a href="https://github.com/johnkil/Android-RobotoTextView-Gradle-Sample">Android-RobotoTextView-Gradle-Sample</a></li>
+</ul><h2>
 <a name="developed-by" class="anchor" href="#developed-by"><span class="octicon octicon-link"></span></a>Developed By</h2>
 
 <ul>
@@ -145,12 +151,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 </code></pre>
       </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/johnkil">johnkil</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Android-RobotoTextView maintained by <a href="https://github.com/johnkil">johnkil</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -161,6 +171,7 @@ limitations under the License.
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
