@@ -55,9 +55,9 @@ Sample layout with RobotoTextView:
     <com.devspark.robototextview.widget.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:typeface="roboto_thin"
             android:textSize="22sp"
-            android:text="Roboto Thin"/>
+            android:text="Roboto Thin"
+            app:typeface="roboto_thin"/>
 </FrameLayout>
 ```
 
