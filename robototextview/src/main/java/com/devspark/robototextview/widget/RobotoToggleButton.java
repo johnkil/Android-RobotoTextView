@@ -105,7 +105,7 @@ public class RobotoToggleButton extends ToggleButton {
             values.recycle();
         }
 
-        Typeface robotoTypeface = RobotoTypefaceManager.obtaintTypeface(context, typefaceValue);
+        Typeface robotoTypeface = RobotoTypefaceManager.obtainTypeface(context, typefaceValue);
         setTypeface(robotoTypeface);
     }
 

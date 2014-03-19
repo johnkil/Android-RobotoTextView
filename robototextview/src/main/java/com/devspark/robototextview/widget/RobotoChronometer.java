@@ -105,7 +105,7 @@ public class RobotoChronometer extends Chronometer {
             values.recycle();
         }
 
-        Typeface robotoTypeface = RobotoTypefaceManager.obtaintTypeface(context, typefaceValue);
+        Typeface robotoTypeface = RobotoTypefaceManager.obtainTypeface(context, typefaceValue);
         setTypeface(robotoTypeface);
     }
 

@@ -105,7 +105,7 @@ public class RobotoTextClock extends TextClock {
             values.recycle();
         }
 
-        Typeface robotoTypeface = RobotoTypefaceManager.obtaintTypeface(context, typefaceValue);
+        Typeface robotoTypeface = RobotoTypefaceManager.obtainTypeface(context, typefaceValue);
         setTypeface(robotoTypeface);
     }
 
