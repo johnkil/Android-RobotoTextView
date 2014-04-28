@@ -98,14 +98,16 @@ public class RobotoExtractEditText extends ExtractEditText {
             return;
         }
 
-        int typefaceValue = 0;
+        int typefaceValue = RobotoTypefaceManager.ROBOTO_REGULAR;
         if (attrs != null) {
             TypedArray values = context.obtainStyledAttributes(attrs, R.styleable.RobotoTextView, defStyle, 0);
-            typefaceValue = values.getInt(R.styleable.RobotoTextView_typeface, 0);
-            values.recycle();
+            if (values != null) {
+                typefaceValue = values.getInt(R.styleable.RobotoTextView_typeface, typefaceValue);
+                values.recycle();
+            }
         }
 
-        Typeface robotoTypeface = RobotoTypefaceManager.obtaintTypeface(context, typefaceValue);
+        Typeface robotoTypeface = RobotoTypefaceManager.obtainTypeface(context, typefaceValue);
         setTypeface(robotoTypeface);
     }
 
