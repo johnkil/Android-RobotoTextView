@@ -94,7 +94,7 @@ Android-RobotoTextView library is now pushed to Maven Central as a AAR, so you j
 
 ``` xml
 dependencies {
-    compile 'com.github.johnkil.android-robototextview:robototextview:2.0.0'
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.0.+'
 }
 ```
 

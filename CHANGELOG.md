@@ -2,6 +2,13 @@ Change Log
 ==========
 
 
+Version 2.0.1 *(2014-04-28)*
+--------------------------
+
+* Make typeface constants public.
+* Default to Roboto Regular instead of Thin when no typeface is specified.
+
+
 Version 2.0.0 *(2013-12-05)*
 --------------------------
 
