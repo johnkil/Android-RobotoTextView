@@ -30,28 +30,28 @@ public class RobotoTypefaceManager {
     /*
      * Available values ​​for the "typeface" attribute.
      */
-    private final static int ROBOTO_THIN = 0;
-    private final static int ROBOTO_THIN_ITALIC = 1;
-    private final static int ROBOTO_LIGHT = 2;
-    private final static int ROBOTO_LIGHT_ITALIC = 3;
-    private final static int ROBOTO_REGULAR = 4;
-    private final static int ROBOTO_ITALIC = 5;
-    private final static int ROBOTO_MEDIUM = 6;
-    private final static int ROBOTO_MEDIUM_ITALIC = 7;
-    private final static int ROBOTO_BOLD = 8;
-    private final static int ROBOTO_BOLD_ITALIC = 9;
-    private final static int ROBOTO_BLACK = 10;
-    private final static int ROBOTO_BLACK_ITALIC = 11;
-    private final static int ROBOTO_CONDENSED_LIGHT = 12;
-    private final static int ROBOTO_CONDENSED_LIGHT_ITALIC = 13;
-    private final static int ROBOTO_CONDENSED_REGULAR = 14;
-    private final static int ROBOTO_CONDENSED_ITALIC = 15;
-    private final static int ROBOTO_CONDENSED_BOLD = 16;
-    private final static int ROBOTO_CONDENSED_BOLD_ITALIC = 17;
-    private final static int ROBOTO_SLAB_THIN = 18;
-    private final static int ROBOTO_SLAB_LIGHT = 19;
-    private final static int ROBOTO_SLAB_REGULAR = 20;
-    private final static int ROBOTO_SLAB_BOLD = 21;
+    public final static int ROBOTO_THIN = 0;
+    public final static int ROBOTO_THIN_ITALIC = 1;
+    public final static int ROBOTO_LIGHT = 2;
+    public final static int ROBOTO_LIGHT_ITALIC = 3;
+    public final static int ROBOTO_REGULAR = 4;
+    public final static int ROBOTO_ITALIC = 5;
+    public final static int ROBOTO_MEDIUM = 6;
+    public final static int ROBOTO_MEDIUM_ITALIC = 7;
+    public final static int ROBOTO_BOLD = 8;
+    public final static int ROBOTO_BOLD_ITALIC = 9;
+    public final static int ROBOTO_BLACK = 10;
+    public final static int ROBOTO_BLACK_ITALIC = 11;
+    public final static int ROBOTO_CONDENSED_LIGHT = 12;
+    public final static int ROBOTO_CONDENSED_LIGHT_ITALIC = 13;
+    public final static int ROBOTO_CONDENSED_REGULAR = 14;
+    public final static int ROBOTO_CONDENSED_ITALIC = 15;
+    public final static int ROBOTO_CONDENSED_BOLD = 16;
+    public final static int ROBOTO_CONDENSED_BOLD_ITALIC = 17;
+    public final static int ROBOTO_SLAB_THIN = 18;
+    public final static int ROBOTO_SLAB_LIGHT = 19;
+    public final static int ROBOTO_SLAB_REGULAR = 20;
+    public final static int ROBOTO_SLAB_BOLD = 21;
     /**
      * Array of created typefaces for later reused.
      */
