@@ -65,7 +65,7 @@ public class RobotoTypefaceManager {
      * @return specify {@link Typeface}
      * @throws IllegalArgumentException if unknown `typeface` attribute value.
      */
-    public static Typeface obtaintTypeface(Context context, int typefaceValue) throws IllegalArgumentException {
+    public static Typeface obtainTypeface (Context context, int typefaceValue) throws IllegalArgumentException {
         Typeface typeface = mTypefaces.get(typefaceValue);
         if (typeface == null) {
             typeface = createTypeface(context, typefaceValue);
