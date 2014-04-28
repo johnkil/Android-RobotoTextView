@@ -16,9 +16,11 @@
 
 package com.devspark.robototextview.widget;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.TextClock;
 
@@ -30,6 +32,7 @@ import com.devspark.robototextview.RobotoTypefaceManager;
  *
  * @author Evgeny Shishkin
  */
+@TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
 public class RobotoTextClock extends TextClock {
 
     /**
