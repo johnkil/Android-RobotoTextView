@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-/* Copyright 2013, Evgeny Shishkin
+/* Copyright 2014, Evgeny Shishkin
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -77,7 +77,7 @@
         <attr name="typeface"/>
     </declare-styleable>
 
-    <!-- Changing the attribute must be reflected in the com.devspark.robototextview.RobotoTypefaceManager -->
+    <!-- Changing the attribute must be reflected in the com.devspark.robototextview.util.RobotoTypefaceManager -->
     <attr name="typeface" format="enum">
         <enum name="roboto_thin" value="0"/>
         <enum name="roboto_thin_italic" value="1"/>

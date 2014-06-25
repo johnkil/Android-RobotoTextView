@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2013 Evgeny Shishkin
+ * Copyright 2014 Evgeny Shishkin
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *    http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.devspark.robototextview;
+package com.devspark.robototextview.util;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -52,10 +52,11 @@ public class RobotoTypefaceManager {
     public final static int ROBOTO_SLAB_LIGHT = 19;
     public final static int ROBOTO_SLAB_REGULAR = 20;
     public final static int ROBOTO_SLAB_BOLD = 21;
+
     /**
      * Array of created typefaces for later reused.
      */
-    private final static SparseArray<Typeface> mTypefaces = new SparseArray<Typeface>(20);
+    private final static SparseArray<Typeface> mTypefaces = new SparseArray<Typeface>(22);
 
     /**
      * Obtain typeface.
