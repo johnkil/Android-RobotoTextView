@@ -41,16 +41,30 @@ public class RobotoTextViewUtils {
      * @param attrs   The attributes of the XML tag that is inflating the widget.
      */
     public static void initTypeface(TextView textView, Context context, AttributeSet attrs) {
-        int typefaceAttrValue = RobotoTypefaceManager.ROBOTO_REGULAR;
+        Typeface typeface;
+
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RobotoTextView);
-            typefaceAttrValue = a.getInt(R.styleable.RobotoTextView_typeface, typefaceAttrValue);
+
+            if (a.hasValue(R.styleable.RobotoTextView_typeface)) {
+                int typefaceValue = a.getInt(R.styleable.RobotoTextView_typeface, RobotoTypefaceManager.Typeface.ROBOTO_REGULAR);
+                typeface = RobotoTypefaceManager.obtainTypeface(context, typefaceValue);
+            } else {
+                int fontFamily = a.getInt(R.styleable.RobotoTextView_fontFamily, RobotoTypefaceManager.FontFamily.ROBOTO);
+                int textWeight = a.getInt(R.styleable.RobotoTextView_textWeight, RobotoTypefaceManager.TextWeight.NORMAL);
+                int textStyle = a.getInt(R.styleable.RobotoTextView_textStyle, RobotoTypefaceManager.TextStyle.NORMAL);
+
+                typeface = RobotoTypefaceManager.obtainTypeface(context, fontFamily, textWeight, textStyle);
+            }
+
             a.recycle();
+        } else {
+            typeface = RobotoTypefaceManager.obtainTypeface(context, RobotoTypefaceManager.Typeface.ROBOTO_REGULAR);
         }
 
-        Typeface robotoTypeface = RobotoTypefaceManager.obtainTypeface(context, typefaceAttrValue);
         //For making the font anti-aliased.
         textView.setPaintFlags(textView.getPaintFlags() | Paint.SUBPIXEL_TEXT_FLAG);
-        textView.setTypeface(robotoTypeface);
+        textView.setTypeface(typeface);
     }
+
 }
