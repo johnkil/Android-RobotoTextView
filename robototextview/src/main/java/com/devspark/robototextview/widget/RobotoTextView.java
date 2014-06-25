@@ -56,7 +56,11 @@ public class RobotoTextView extends TextView {
      * @see #RobotoTextView(Context, AttributeSet, int)
      */
     public RobotoTextView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

@@ -56,7 +56,11 @@ public class RobotoToggleButton extends ToggleButton {
      * @see #RobotoToggleButton(Context, android.util.AttributeSet, int)
      */
     public RobotoToggleButton(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

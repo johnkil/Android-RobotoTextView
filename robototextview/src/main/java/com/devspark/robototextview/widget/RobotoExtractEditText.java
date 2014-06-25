@@ -56,7 +56,11 @@ public class RobotoExtractEditText extends ExtractEditText {
      * @see #RobotoExtractEditText(Context, android.util.AttributeSet, int)
      */
     public RobotoExtractEditText(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

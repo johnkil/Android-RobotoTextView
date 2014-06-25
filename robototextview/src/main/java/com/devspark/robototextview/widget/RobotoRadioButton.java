@@ -56,7 +56,11 @@ public class RobotoRadioButton extends RadioButton {
      * @see #RobotoRadioButton(Context, android.util.AttributeSet, int)
      */
     public RobotoRadioButton(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

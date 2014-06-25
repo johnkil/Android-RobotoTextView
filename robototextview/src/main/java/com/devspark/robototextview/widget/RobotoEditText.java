@@ -56,7 +56,11 @@ public class RobotoEditText extends EditText {
      * @see #RobotoEditText(Context, android.util.AttributeSet, int)
      */
     public RobotoEditText(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

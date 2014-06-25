@@ -59,7 +59,11 @@ public class RobotoTextClock extends TextClock {
      * @see #RobotoTextClock(Context, android.util.AttributeSet, int)
      */
     public RobotoTextClock(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

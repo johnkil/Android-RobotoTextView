@@ -56,7 +56,11 @@ public class RobotoCompoundButton extends CompoundButton {
      * @see #RobotoCompoundButton(Context, android.util.AttributeSet, int)
      */
     public RobotoCompoundButton(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

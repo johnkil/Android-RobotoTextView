@@ -56,7 +56,11 @@ public class RobotoMultiAutoCompleteTextView extends MultiAutoCompleteTextView {
      * @see #RobotoMultiAutoCompleteTextView(Context, android.util.AttributeSet, int)
      */
     public RobotoMultiAutoCompleteTextView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

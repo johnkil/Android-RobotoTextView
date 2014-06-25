@@ -56,7 +56,11 @@ public class RobotoCheckedTextView extends CheckedTextView {
      * @see #RobotoCheckedTextView(Context, android.util.AttributeSet, int)
      */
     public RobotoCheckedTextView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

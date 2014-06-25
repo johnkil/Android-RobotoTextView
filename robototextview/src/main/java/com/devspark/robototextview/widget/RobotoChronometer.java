@@ -56,7 +56,11 @@ public class RobotoChronometer extends Chronometer {
      * @see #RobotoChronometer(Context, android.util.AttributeSet, int)
      */
     public RobotoChronometer(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

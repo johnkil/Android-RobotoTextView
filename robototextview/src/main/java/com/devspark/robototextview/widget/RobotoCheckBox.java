@@ -56,7 +56,11 @@ public class RobotoCheckBox extends CheckBox {
      * @see #RobotoCheckBox(Context, android.util.AttributeSet, int)
      */
     public RobotoCheckBox(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**

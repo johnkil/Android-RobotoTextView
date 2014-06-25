@@ -56,7 +56,11 @@ public class RobotoAutoCompleteTextView extends AutoCompleteTextView {
      * @see #RobotoAutoCompleteTextView(Context, android.util.AttributeSet, int)
      */
     public RobotoAutoCompleteTextView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**
