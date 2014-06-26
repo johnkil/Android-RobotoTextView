@@ -311,10 +311,7 @@ public class RobotoTypefaceManager {
                 throw new IllegalArgumentException("Unknown `typeface` attribute value " + typefaceValue);
         }
 
-        android.graphics.Typeface typeface =
-                android.graphics.Typeface.createFromAsset(context.getAssets(), typefacePath);
-
-        return typeface;
+        return android.graphics.Typeface.createFromAsset(context.getAssets(), typefacePath);
     }
 
     /**

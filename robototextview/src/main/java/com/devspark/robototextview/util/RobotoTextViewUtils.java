@@ -26,6 +26,8 @@ import android.widget.TextView;
 import com.devspark.robototextview.R;
 
 /**
+ * Utilities for working with roboto text views.
+ *
  * @author Evgeny Shishkin
  */
 public class RobotoTextViewUtils {
@@ -34,11 +36,12 @@ public class RobotoTextViewUtils {
     }
 
     /**
-     * Setup Roboto typeface.
+     * Typeface initialization using the attributes. Used in RobotoTextView constructor.
      *
-     * @param context The Context the widget is running in, through which it can
-     *                access the current theme, resources, etc.
-     * @param attrs   The attributes of the XML tag that is inflating the widget.
+     * @param textView The roboto text view
+     * @param context  The context the widget is running in, through which it can
+     *                 access the current theme, resources, etc.
+     * @param attrs    The attributes of the XML tag that is inflating the widget.
      */
     public static void initTypeface(TextView textView, Context context, AttributeSet attrs) {
         Typeface typeface;
@@ -62,6 +65,17 @@ public class RobotoTextViewUtils {
             typeface = RobotoTypefaceManager.obtainTypeface(context, RobotoTypefaceManager.Typeface.ROBOTO_REGULAR);
         }
 
+        setTypeface(textView, typeface);
+    }
+
+    /**
+     * Setup typeface for TextView. Wrapper over {@link android.widget.TextView#setTypeface(android.graphics.Typeface)}
+     * for making the font anti-aliased.
+     *
+     * @param textView The text view
+     * @param typeface The specify typeface
+     */
+    public static void setTypeface(TextView textView, Typeface typeface) {
         //For making the font anti-aliased.
         textView.setPaintFlags(textView.getPaintFlags() | Paint.SUBPIXEL_TEXT_FLAG);
         textView.setTypeface(typeface);
