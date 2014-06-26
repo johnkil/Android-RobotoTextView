@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-/* Copyright 2013, Evgeny Shishkin
+/* Copyright 2014, Evgeny Shishkin
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -17,68 +17,113 @@
 -->
 <resources>
 
-    <declare-styleable name="RobotoTextView">
-        <attr name="typeface"/>
-    </declare-styleable>
-
     <declare-styleable name="RobotoAutoCompleteTextView">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoButton">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoCheckBox">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoCheckedTextView">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoChronometer">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoCompoundButton">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoDigitalClock">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoEditText">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoExtractEditText">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoMultiAutoCompleteTextView">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoRadioButton">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoSwitch">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoTextClock">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoTextView">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
     <declare-styleable name="RobotoToggleButton">
         <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
     </declare-styleable>
 
-    <!-- Changing the attribute must be reflected in the com.devspark.robototextview.RobotoTypefaceManager -->
-    <attr name="typeface" format="enum">
+
+    <attr name="typeface">
         <enum name="roboto_thin" value="0"/>
         <enum name="roboto_thin_italic" value="1"/>
         <enum name="roboto_light" value="2"/>
@@ -101,6 +146,26 @@
         <enum name="roboto_slab_light" value="19"/>
         <enum name="roboto_slab_regular" value="20"/>
         <enum name="roboto_slab_bold" value="21"/>
+    </attr>
+
+    <attr name="fontFamily">
+        <enum name="roboto" value="0"/>
+        <enum name="roboto_condensed" value="1"/>
+        <enum name="roboto_slab" value="2"/>
+    </attr>
+
+    <attr name="textWeight">
+        <enum name="normal" value="0"/>
+        <enum name="thin" value="1"/>
+        <enum name="light" value="2"/>
+        <enum name="medium" value="3"/>
+        <enum name="bold" value="4"/>
+        <enum name="ultra_bold" value="5"/>
+    </attr>
+
+    <attr name="textStyle">
+        <enum name="normal" value="0"/>
+        <enum name="italic" value="1"/>
     </attr>
 
 </resources>

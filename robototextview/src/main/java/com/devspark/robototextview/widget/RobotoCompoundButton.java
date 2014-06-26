@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2013 Evgeny Shishkin
+ * Copyright 2014 Evgeny Shishkin
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *    http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,13 +17,10 @@
 package com.devspark.robototextview.widget;
 
 import android.content.Context;
-import android.content.res.TypedArray;
-import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.CompoundButton;
 
-import com.devspark.robototextview.R;
-import com.devspark.robototextview.RobotoTypefaceManager;
+import com.devspark.robototextview.util.RobotoTextViewUtils;
 
 /**
  * Implementation of a {@link CompoundButton} with native support for all the Roboto fonts.
@@ -39,8 +36,7 @@ public class RobotoCompoundButton extends CompoundButton {
      *                access the current theme, resources, etc.
      */
     public RobotoCompoundButton(Context context) {
-        super(context);
-        onInitTypeface(context, null, 0);
+        this(context, null);
     }
 
     /**
@@ -61,7 +57,10 @@ public class RobotoCompoundButton extends CompoundButton {
      */
     public RobotoCompoundButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        onInitTypeface(context, attrs, 0);
+
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
+        }
     }
 
     /**
@@ -80,35 +79,10 @@ public class RobotoCompoundButton extends CompoundButton {
      */
     public RobotoCompoundButton(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        onInitTypeface(context, attrs, defStyle);
-    }
 
-    /**
-     * Setup Roboto typeface.
-     *
-     * @param context  The Context the widget is running in, through which it can
-     *                 access the current theme, resources, etc.
-     * @param attrs    The attributes of the XML tag that is inflating the widget.
-     * @param defStyle The default style to apply to this widget. If 0, no style
-     *                 will be applied (beyond what is included in the theme).
-     */
-    private void onInitTypeface(Context context, AttributeSet attrs, int defStyle) {
-        // Typeface.createFromAsset doesn't work in the layout editor, so skipping.
-        if (isInEditMode()) {
-            return;
+        if (!isInEditMode()) {
+            RobotoTextViewUtils.initTypeface(this, context, attrs);
         }
-
-        int typefaceValue = RobotoTypefaceManager.ROBOTO_REGULAR;
-        if (attrs != null) {
-            TypedArray values = context.obtainStyledAttributes(attrs, R.styleable.RobotoTextView, defStyle, 0);
-            if (values != null) {
-                typefaceValue = values.getInt(R.styleable.RobotoTextView_typeface, typefaceValue);
-                values.recycle();
-            }
-        }
-
-        Typeface robotoTypeface = RobotoTypefaceManager.obtainTypeface(context, typefaceValue);
-        setTypeface(robotoTypeface);
     }
 
 }
