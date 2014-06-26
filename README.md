@@ -1,7 +1,7 @@
 Android-RobotoTextView
 ======================
 
-Implementation of a [TextView](http://developer.android.com/reference/android/widget/TextView.html) and all its direct/indirect subclasses with native support for the [Roboto](http://developer.android.com/design/style/typography.html) fonts, includes the brand new [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab) fonts.
+Implementation of a [TextView](http://developer.android.com/reference/android/widget/TextView.html) and all its direct/indirect subclasses with native support for the [Roboto](http://www.google.com/design/spec/style/typography.html) fonts, includes the brand new [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab) fonts.
 
 Implemented next views:
 
@@ -20,6 +20,12 @@ Implemented next views:
 * `RobotoSwitch`
 * `RobotoTextClock`
 * `RobotoToggleButton`
+
+Support next fonts:
+
+* [Roboto](http://www.google.com/fonts/specimen/Roboto)
+* [Roboto Condensed](http://www.google.com/fonts/specimen/Roboto+Condensed)
+* [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab)
 
 
 Sample
@@ -41,50 +47,70 @@ Compatibility
 This library is compatible from API 3 (Android 1.5).
 
 
-Usage
------
-
-Sample layout with RobotoTextView:
+Example
+-------
 
 ``` xml
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto"
              android:layout_width="match_parent"
              android:layout_height="match_parent">
-             
+
     <com.devspark.robototextview.widget.RobotoTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:text="Roboto Thin"
             app:typeface="roboto_thin"/>
 </FrameLayout>
 ```
 
-Available values ​​for the `typeface` attribute:
 
-* roboto_thin
-* roboto_thin_italic
-* roboto_light
-* roboto_light_italic
-* roboto_regular
-* roboto_italic
-* roboto_medium
-* roboto_medium_italic
-* roboto_bold
-* roboto_bold_italic
-* roboto_black
-* roboto_black_italic
-* roboto_condensed_light
-* roboto_condensed_light_italic
-* roboto_condensed_regular
-* roboto_condensed_italic
-* roboto_condensed_bold
-* roboto_condensed_bold_italic
-* roboto_slab_thin
-* roboto_slab_light
-* roboto_slab_regular
-* roboto_slab_bold
+Usage
+-----
+
+#### In XML
+
+To setup a typeface you must specify the parameter `typeface`:
+
+``` xml
+<com.devspark.robototextview.widget.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:typeface="roboto_light_italic"/>
+```
+
+or specify a set of parameters `fontFamily`, `textWeight` and `textStyle`:
+``` xml
+<com.devspark.robototextview.widget.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fontFamily="roboto"
+            app:textWeight="light"
+            app:textStyle="italic"/>
+```
+
+Setup typeface in code:
+
+#### In Code
+
+Using parameter `typeface`:
+``` java
+RobotoTextView textView = new RobotoTextView(context);
+Typeface typeface = RobotoTypefaceManager.obtainTypeface(
+        context, 
+        RobotoTypefaceManager.Typeface.ROBOTO_LIGHT_ITALIC);
+RobotoTextViewUtils.setTypeface(textView, typeface);
+```
+
+Using parameters `fontFamily`, `textWeight` and `textStyle`:
+``` java
+RobotoTextView textView = new RobotoTextView(context);
+Typeface typeface = RobotoTypefaceManager.obtainTypeface(
+        context, 
+        RobotoTypefaceManager.FontFamily.ROBOTO,
+        RobotoTypefaceManager.TextWeight.LIGHT,
+        RobotoTypefaceManager.TextStyle.ITALIC);
+RobotoTextViewUtils.setTypeface(textView, typeface);
+```
 
 
 Gradle
@@ -94,7 +120,7 @@ Android-RobotoTextView library is now pushed to Maven Central as a AAR, so you j
 
 ``` xml
 dependencies {
-    compile 'com.github.johnkil.android-robototextview:robototextview:2.0.1'
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.1.0'
 }
 ```
 
