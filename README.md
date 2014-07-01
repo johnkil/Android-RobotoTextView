@@ -129,7 +129,7 @@ If you intend to use is not all fonts, the extra fonts can be removed.
 ``` xml
 android.applicationVariants.all{ variant ->
     variant.mergeAssets.doFirst {
-        File fonts = file("${rootDir}/build/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.0.1/assets/fonts")
+        File fonts = file("${rootDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.0.1/assets/fonts")
         if (fonts.exists()) {
             for (File file : fonts.listFiles()) {
                 if (file.getName().contains("RobotoSlab")) {
