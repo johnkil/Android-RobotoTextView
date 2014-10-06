@@ -76,8 +76,7 @@ public class RobotoTextViewUtils {
      * @param typeface The specify typeface
      */
     public static void setTypeface(TextView textView, Typeface typeface) {
-        //For making the font anti-aliased.
-        textView.setPaintFlags(textView.getPaintFlags() | Paint.SUBPIXEL_TEXT_FLAG);
+        textView.setPaintFlags(textView.getPaintFlags() | Paint.SUBPIXEL_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
         textView.setTypeface(typeface);
     }
 
@@ -88,7 +87,7 @@ public class RobotoTextViewUtils {
      * @param typeface The specify typeface
      */
     public static void setTypeface(Paint paint, Typeface typeface) {
-        paint.setFlags(paint.getFlags() | Paint.SUBPIXEL_TEXT_FLAG);
+        paint.setFlags(paint.getFlags() | Paint.SUBPIXEL_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
         paint.setTypeface(typeface);
     }
 
