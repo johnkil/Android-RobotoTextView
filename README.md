@@ -5,42 +5,18 @@ Android-RobotoTextView
 
 Implementation of a [TextView](http://developer.android.com/reference/android/widget/TextView.html) and all its direct/indirect subclasses with native support for the [Roboto](http://www.google.com/design/spec/style/typography.html) fonts, includes the brand new [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab) fonts.
 
-Implemented next views:
-
-* `RobotoTextView`
-* `RobotoAutoCompleteTextView`
-* `RobotoButton`
-* `RobotoCheckBox`
-* `RobotoCheckedTextView`
-* `RobotoChronometer`
-* `RobotoCompoundButton`
-* `RobotoDigitalClock`
-* `RobotoEditText`
-* `RobotoExtractEditText`
-* `RobotoMultiAutoCompleteTextView`
-* `RobotoRadioButton`
-* `RobotoSwitch`
-* `RobotoTextClock`
-* `RobotoToggleButton`
-
-Support next fonts:
+Supported fonts:
 
 * [Roboto](http://www.google.com/fonts/specimen/Roboto)
 * [Roboto Condensed](http://www.google.com/fonts/specimen/Roboto+Condensed)
 * [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab)
 
-
-Sample
-------
-
-Application is available on Google Play:
+![image](https://raw.githubusercontent.com/johnkil/Android-RobotoTextView/master/art/RobotoTextView.jpg)
 
 <a href="http://play.google.com/store/apps/details?id=com.devspark.robototextview">
   <img alt="Get it on Google Play"
        src="http://www.android.com/images/brand/get_it_on_play_logo_small.png" />
 </a>
-
-![screenshot][1]
 
 
 Compatibility
@@ -191,5 +167,3 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-[1]: http://i46.tinypic.com/b9dg69.png
