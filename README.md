@@ -25,20 +25,23 @@ Compatibility
 This library is compatible from API 3 (Android 1.5).
 
 
-Example
--------
+Download
+--------
 
-``` xml
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+Gradle:
 
-    <com.devspark.robototextview.widget.RobotoTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:typeface="roboto_thin"/>
-</FrameLayout>
+```groovy
+compile 'com.github.johnkil.android-robototextview:robototextview:2.2.0'
+```
+
+Maven:
+
+```xml
+<dependency>
+    <groupId>com.github.johnkil.android-robototextview</groupId>
+    <artifactId>robototextview</artifactId>
+    <version>2.2.0</version>
+</dependency>
 ```
 
 
@@ -115,14 +118,6 @@ spannable.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 Gradle
 ------
 
-Android-RobotoTextView library is now pushed to Maven Central as a AAR, so you just need to add the following dependency to your build.gradle.
-
-``` xml
-dependencies {
-    compile 'com.github.johnkil.android-robototextview:robototextview:2.1.0'
-}
-```
-
 If you intend to use is not all fonts, the extra fonts can be removed.
 
 ``` xml
@@ -140,10 +135,6 @@ android.applicationVariants.all{ variant ->
     }
 }
 ```
-
-Example Gradle project using Android-RobotoTextView:
-
-* [Android-RobotoTextView-Gradle-Sample](https://github.com/johnkil/Android-RobotoTextView-Gradle-Sample)
 
 
 Developed By
