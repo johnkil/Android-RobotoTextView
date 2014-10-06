@@ -81,4 +81,15 @@ public class RobotoTextViewUtils {
         textView.setTypeface(typeface);
     }
 
+    /**
+     * Setup typeface for Paint.
+     *
+     * @param paint    The paint
+     * @param typeface The specify typeface
+     */
+    public static void setTypeface(Paint paint, Typeface typeface) {
+        paint.setFlags(paint.getFlags() | Paint.SUBPIXEL_TEXT_FLAG);
+        paint.setTypeface(typeface);
+    }
+
 }
