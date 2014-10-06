@@ -112,6 +112,27 @@ Typeface typeface = RobotoTypefaceManager.obtainTypeface(
 RobotoTextViewUtils.setTypeface(textView, typeface);
 ```
 
+#### With Span
+
+Using parameter `typeface`:
+``` java
+RobotoTypefaceSpan span = new RobotoTypefaceSpan(
+        context,
+        RobotoTypefaceManager.Typeface.ROBOTO_BOLD);
+Spannable spannable = new SpannableString("text");
+spannable.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+```
+
+Using parameters `fontFamily`, `textWeight` and `textStyle`:
+``` java
+RobotoTypefaceSpan span = new RobotoTypefaceSpan(
+        context,
+        RobotoTypefaceManager.FontFamily.ROBOTO,
+        RobotoTypefaceManager.TextWeight.LIGHT,
+        RobotoTypefaceManager.TextStyle.ITALIC);
+Spannable spannable = new SpannableString("text");
+spannable.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+```
 
 Gradle
 ------
