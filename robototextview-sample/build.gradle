@@ -1,15 +1,18 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.devspark.robototextview.sample"
+        minSdkVersion 3
+        targetSdkVersion 20
+        versionCode 10
+        versionName "2.2.0"
+    }
+}
 
 dependencies {
     compile project(':robototextview')
-}
-
-android {
-    compileSdkVersion 19
-    buildToolsVersion "19.1.0"
-
-    defaultConfig {
-        minSdkVersion 3
-        targetSdkVersion 19
-    }
 }
