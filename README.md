@@ -1,6 +1,8 @@
 Android-RobotoTextView
 ======================
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android--RobotoTextView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/471)
+
 Implementation of a [TextView](http://developer.android.com/reference/android/widget/TextView.html) and all its direct/indirect subclasses with native support for the [Roboto](http://www.google.com/design/spec/style/typography.html) fonts, includes the brand new [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab) fonts.
 
 Implemented next views:
@@ -129,7 +131,7 @@ If you intend to use is not all fonts, the extra fonts can be removed.
 ``` xml
 android.applicationVariants.all{ variant ->
     variant.mergeAssets.doFirst {
-        File fonts = file("${rootDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.1.0/assets/fonts")
+        File fonts = file("${projectDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.1.0/assets/fonts")
         if (fonts.exists()) {
             for (File file : fonts.listFiles()) {
                 if (file.getName().contains("RobotoSlab")) {
