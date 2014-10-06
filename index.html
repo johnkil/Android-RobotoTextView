@@ -1,71 +1,53 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta name="description" content="Android-RobotoTextView : Implementation of a TextView and all its direct/indirect subclasses with native support for the Roboto fonts, includes the brand new Roboto Slab fonts.">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Android-RobotoTextView by johnkil</title>
+    <title>Android-RobotoTextView</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Android-RobotoTextView</h1>
-        <h2>Implementation of a TextView and all its direct/indirect subclasses with native support for the Roboto fonts, includes the brand new Roboto Slab fonts.</h2>
-        <a href="https://github.com/johnkil/Android-RobotoTextView" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/johnkil/Android-RobotoTextView">View on GitHub</a>
+
+          <h1 id="project_title">Android-RobotoTextView</h1>
+          <h2 id="project_tagline">Implementation of a TextView and all its direct/indirect subclasses with native support for the Roboto fonts, includes the brand new Roboto Slab fonts.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/johnkil/Android-RobotoTextView/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/johnkil/Android-RobotoTextView/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a name="android-robototextview" class="anchor" href="#android-robototextview"><span class="octicon octicon-link"></span></a>Android-RobotoTextView</h1>
+
+<p><a href="https://android-arsenal.com/details/1/471"><img src="https://img.shields.io/badge/Android%20Arsenal-Android--RobotoTextView-brightgreen.svg?style=flat" alt="Android Arsenal"></a></p>
 
 <p>Implementation of a <a href="http://developer.android.com/reference/android/widget/TextView.html">TextView</a> and all its direct/indirect subclasses with native support for the <a href="http://www.google.com/design/spec/style/typography.html">Roboto</a> fonts, includes the brand new <a href="http://www.google.com/fonts/specimen/Roboto+Slab">Roboto Slab</a> fonts.</p>
 
-<p>Implemented next views:</p>
-
-<ul>
-<li><code>RobotoTextView</code></li>
-<li><code>RobotoAutoCompleteTextView</code></li>
-<li><code>RobotoButton</code></li>
-<li><code>RobotoCheckBox</code></li>
-<li><code>RobotoCheckedTextView</code></li>
-<li><code>RobotoChronometer</code></li>
-<li><code>RobotoCompoundButton</code></li>
-<li><code>RobotoDigitalClock</code></li>
-<li><code>RobotoEditText</code></li>
-<li><code>RobotoExtractEditText</code></li>
-<li><code>RobotoMultiAutoCompleteTextView</code></li>
-<li><code>RobotoRadioButton</code></li>
-<li><code>RobotoSwitch</code></li>
-<li><code>RobotoTextClock</code></li>
-<li><code>RobotoToggleButton</code></li>
-</ul><p>Support next fonts:</p>
+<p>Supported fonts:</p>
 
 <ul>
 <li><a href="http://www.google.com/fonts/specimen/Roboto">Roboto</a></li>
 <li><a href="http://www.google.com/fonts/specimen/Roboto+Condensed">Roboto Condensed</a></li>
 <li><a href="http://www.google.com/fonts/specimen/Roboto+Slab">Roboto Slab</a></li>
-</ul><h2>
-<a name="sample" class="anchor" href="#sample"><span class="octicon octicon-link"></span></a>Sample</h2>
-
-<p>Application is available on Google Play:</p>
+</ul><p><img src="https://raw.githubusercontent.com/johnkil/Android-RobotoTextView/master/art/RobotoTextView.jpg" alt="image"></p>
 
 <p><a href="http://play.google.com/store/apps/details?id=com.devspark.robototextview">
   <img alt="Get it on Google Play" src="http://www.android.com/images/brand/get_it_on_play_logo_small.png"></a></p>
-
-<p><img src="http://i46.tinypic.com/b9dg69.png" alt="screenshot"></p>
 
 <h2>
 <a name="compatibility" class="anchor" href="#compatibility"><span class="octicon octicon-link"></span></a>Compatibility</h2>
@@ -73,18 +55,20 @@
 <p>This library is compatible from API 3 (Android 1.5).</p>
 
 <h2>
-<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h2>
 
-<div class="highlight highlight-xml"><pre><span class="nt">&lt;FrameLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
-             <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
-             <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
-             <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+<p>Gradle:</p>
 
-    <span class="nt">&lt;com.devspark.robototextview.widget.RobotoTextView</span>
-            <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
-            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
-            <span class="na">app:typeface=</span><span class="s">"roboto_thin"</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/FrameLayout&gt;</span>
+<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.github.johnkil.android-robototextview:robototextview:2.2.0'</span>
+</pre></div>
+
+<p>Maven:</p>
+
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.github.johnkil.android-robototextview<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>robototextview<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>2.2.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
 </pre></div>
 
 <h2>
@@ -136,21 +120,37 @@
 <span class="n">RobotoTextViewUtils</span><span class="o">.</span><span class="na">setTypeface</span><span class="o">(</span><span class="n">textView</span><span class="o">,</span> <span class="n">typeface</span><span class="o">);</span>
 </pre></div>
 
+<h4>
+<a name="with-span" class="anchor" href="#with-span"><span class="octicon octicon-link"></span></a>With Span</h4>
+
+<p>Using parameter <code>typeface</code>:</p>
+
+<div class="highlight highlight-java"><pre><span class="n">RobotoTypefaceSpan</span> <span class="n">span</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">RobotoTypefaceSpan</span><span class="o">(</span>
+        <span class="n">context</span><span class="o">,</span>
+        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">Typeface</span><span class="o">.</span><span class="na">ROBOTO_BOLD</span><span class="o">);</span>
+<span class="n">Spannable</span> <span class="n">spannable</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">SpannableString</span><span class="o">(</span><span class="s">"text"</span><span class="o">);</span>
+<span class="n">spannable</span><span class="o">.</span><span class="na">setSpan</span><span class="o">(</span><span class="n">span</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">Spannable</span><span class="o">.</span><span class="na">SPAN_EXCLUSIVE_EXCLUSIVE</span><span class="o">);</span>
+</pre></div>
+
+<p>Using parameters <code>fontFamily</code>, <code>textWeight</code> and <code>textStyle</code>:</p>
+
+<div class="highlight highlight-java"><pre><span class="n">RobotoTypefaceSpan</span> <span class="n">span</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">RobotoTypefaceSpan</span><span class="o">(</span>
+        <span class="n">context</span><span class="o">,</span>
+        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">FontFamily</span><span class="o">.</span><span class="na">ROBOTO</span><span class="o">,</span>
+        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">TextWeight</span><span class="o">.</span><span class="na">LIGHT</span><span class="o">,</span>
+        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">TextStyle</span><span class="o">.</span><span class="na">ITALIC</span><span class="o">);</span>
+<span class="n">Spannable</span> <span class="n">spannable</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">SpannableString</span><span class="o">(</span><span class="s">"text"</span><span class="o">);</span>
+<span class="n">spannable</span><span class="o">.</span><span class="na">setSpan</span><span class="o">(</span><span class="n">span</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">Spannable</span><span class="o">.</span><span class="na">SPAN_EXCLUSIVE_EXCLUSIVE</span><span class="o">);</span>
+</pre></div>
+
 <h2>
 <a name="gradle" class="anchor" href="#gradle"><span class="octicon octicon-link"></span></a>Gradle</h2>
-
-<p>Android-RobotoTextView library is now pushed to Maven Central as a AAR, so you just need to add the following dependency to your build.gradle.</p>
-
-<div class="highlight highlight-xml"><pre>dependencies {
-    compile 'com.github.johnkil.android-robototextview:robototextview:2.1.0'
-}
-</pre></div>
 
 <p>If you intend to use is not all fonts, the extra fonts can be removed.</p>
 
 <div class="highlight highlight-xml"><pre>android.applicationVariants.all{ variant -&gt;
     variant.mergeAssets.doFirst {
-        File fonts = file("${rootDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.0.1/assets/fonts")
+        File fonts = file("${projectDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.2.0/assets/fonts")
         if (fonts.exists()) {
             for (File file : fonts.listFiles()) {
                 if (file.getName().contains("RobotoSlab")) {
@@ -163,11 +163,7 @@
 }
 </pre></div>
 
-<p>Example Gradle project using Android-RobotoTextView:</p>
-
-<ul>
-<li><a href="https://github.com/johnkil/Android-RobotoTextView-Gradle-Sample">Android-RobotoTextView-Gradle-Sample</a></li>
-</ul><h2>
+<h2>
 <a name="developed-by" class="anchor" href="#developed-by"><span class="octicon octicon-link"></span></a>Developed By</h2>
 
 <ul>
@@ -190,26 +186,18 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 </code></pre>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/johnkil/Android-RobotoTextView/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/johnkil/Android-RobotoTextView/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/johnkil/Android-RobotoTextView"></a> is maintained by <a href="https://github.com/johnkil">johnkil</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-            <script type="text/javascript">
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Android-RobotoTextView maintained by <a href="https://github.com/johnkil">johnkil</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -219,6 +207,7 @@ limitations under the License.
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
