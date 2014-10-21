@@ -1,1 +1,2 @@
-include ':robototextview', ':robototextview-sample'
+include ':robototextview'
+include ':robototextview-sample'
