@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.devspark.robototextview.sample"
-        minSdkVersion 3
+        minSdkVersion 7
         targetSdkVersion 21
         versionCode 10
         versionName "2.2.0"
@@ -15,4 +15,5 @@ android {
 
 dependencies {
     compile project(':robototextview')
+    compile 'com.android.support:appcompat-v7:21.0.0'
 }

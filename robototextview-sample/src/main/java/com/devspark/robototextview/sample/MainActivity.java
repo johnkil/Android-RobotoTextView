@@ -16,13 +16,13 @@
 
 package com.devspark.robototextview.sample;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 
 /**
  * @author Evgeny Shishkin
  */
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
     /**
      * Called when the activity is first created.
      */
