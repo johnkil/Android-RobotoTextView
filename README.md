@@ -41,6 +41,7 @@ Maven:
     <groupId>com.github.johnkil.android-robototextview</groupId>
     <artifactId>robototextview</artifactId>
     <version>2.2.0</version>
+    <type>aar</type>
 </dependency>
 ```
 
@@ -54,6 +55,8 @@ To setup a typeface you must specify the parameter `typeface`:
 
 ``` xml
 <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:typeface="roboto_light_italic"/>
@@ -62,6 +65,8 @@ To setup a typeface you must specify the parameter `typeface`:
 or specify a set of parameters `fontFamily`, `textWeight` and `textStyle`:
 ``` xml
 <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fontFamily="roboto"
@@ -137,21 +142,16 @@ android.applicationVariants.all{ variant ->
 ```
 
 
-Developed By
-------------
-* Evgeny Shishkin - <johnkil78@gmail.com>
-
-
 License
 -------
 
     Copyright 2014 Evgeny Shishkin
-    
+
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
     
-    http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0
     
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
