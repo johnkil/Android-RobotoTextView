@@ -2,6 +2,13 @@ Change Log
 ==========
 
 
+Version 2.3.0 *(2015-01-23)*
+----------------------------
+
+* Support Tint widgets from AppCompat v21.
+* Support Gradle 1.0.
+
+
 Version 2.2.0 *(2014-10-06)*
 ----------------------------
 
