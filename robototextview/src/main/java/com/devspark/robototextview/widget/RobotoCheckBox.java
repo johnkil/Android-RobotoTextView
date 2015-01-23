@@ -17,6 +17,7 @@
 package com.devspark.robototextview.widget;
 
 import android.content.Context;
+import android.support.v7.internal.widget.TintCheckBox;
 import android.util.AttributeSet;
 import android.widget.CheckBox;
 
@@ -27,7 +28,7 @@ import com.devspark.robototextview.util.RobotoTextViewUtils;
  *
  * @author Evgeny Shishkin
  */
-public class RobotoCheckBox extends CheckBox {
+public class RobotoCheckBox extends TintCheckBox {
 
     /**
      * Simple constructor to use when creating a widget from code.

@@ -17,6 +17,7 @@
 package com.devspark.robototextview.widget;
 
 import android.content.Context;
+import android.support.v7.internal.widget.TintCheckedTextView;
 import android.util.AttributeSet;
 import android.widget.CheckedTextView;
 
@@ -27,7 +28,7 @@ import com.devspark.robototextview.util.RobotoTextViewUtils;
  *
  * @author Evgeny Shishkin
  */
-public class RobotoCheckedTextView extends CheckedTextView {
+public class RobotoCheckedTextView extends TintCheckedTextView {
 
     /**
      * Simple constructor to use when creating a widget from code.
