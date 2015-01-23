@@ -32,7 +32,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="android-robototextview" class="anchor" href="#android-robototextview"><span class="octicon octicon-link"></span></a>Android-RobotoTextView</h1>
+<a id="android-robototextview" class="anchor" href="#android-robototextview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android-RobotoTextView</h1>
 
 <p><a href="https://android-arsenal.com/details/1/471"><img src="https://img.shields.io/badge/Android%20Arsenal-Android--RobotoTextView-brightgreen.svg?style=flat" alt="Android Arsenal"></a></p>
 
@@ -44,113 +44,113 @@
 <li><a href="http://www.google.com/fonts/specimen/Roboto">Roboto</a></li>
 <li><a href="http://www.google.com/fonts/specimen/Roboto+Condensed">Roboto Condensed</a></li>
 <li><a href="http://www.google.com/fonts/specimen/Roboto+Slab">Roboto Slab</a></li>
-</ul><p><img src="https://raw.githubusercontent.com/johnkil/Android-RobotoTextView/master/art/RobotoTextView.jpg" alt="image"></p>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/johnkil/Android-RobotoTextView/master/art/RobotoTextView.jpg" alt="image"></p>
 
 <p><a href="http://play.google.com/store/apps/details?id=com.devspark.robototextview">
-  <img alt="Get it on Google Play" src="http://www.android.com/images/brand/get_it_on_play_logo_small.png"></a></p>
+  <img alt="Get it on Google Play" src="http://www.android.com/images/brand/get_it_on_play_logo_small.png">
+</a></p>
 
 <h2>
-<a name="compatibility" class="anchor" href="#compatibility"><span class="octicon octicon-link"></span></a>Compatibility</h2>
+<a id="compatibility" class="anchor" href="#compatibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibility</h2>
 
-<p>This library is compatible from API 3 (Android 1.5).</p>
+<p>This library is compatible from API 7 (Android 2.1).</p>
 
 <h2>
-<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download</h2>
 
 <p>Gradle:</p>
 
-<div class="highlight highlight-groovy"><pre><span class="n">compile</span> <span class="s1">'com.github.johnkil.android-robototextview:robototextview:2.2.0'</span>
-</pre></div>
+<div class="highlight highlight-groovy"><pre>compile <span class="pl-s1"><span class="pl-pds">'</span>com.github.johnkil.android-robototextview:robototextview:2.3.0<span class="pl-pds">'</span></span></pre></div>
 
 <p>Maven:</p>
 
-<div class="highlight highlight-xml"><pre><span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>com.github.johnkil.android-robototextview<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>robototextview<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>2.2.0<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</pre></div>
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">dependency</span>&gt;
+    &lt;<span class="pl-ent">groupId</span>&gt;com.github.johnkil.android-robototextview&lt;/<span class="pl-ent">groupId</span>&gt;
+    &lt;<span class="pl-ent">artifactId</span>&gt;robototextview&lt;/<span class="pl-ent">artifactId</span>&gt;
+    &lt;<span class="pl-ent">version</span>&gt;2.3.0&lt;/<span class="pl-ent">version</span>&gt;
+    &lt;<span class="pl-ent">type</span>&gt;aar&lt;/<span class="pl-ent">type</span>&gt;
+&lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <h4>
-<a name="in-xml" class="anchor" href="#in-xml"><span class="octicon octicon-link"></span></a>In XML</h4>
+<a id="in-xml" class="anchor" href="#in-xml" aria-hidden="true"><span class="octicon octicon-link"></span></a>In XML</h4>
 
 <p>To setup a typeface you must specify the parameter <code>typeface</code>:</p>
 
-<div class="highlight highlight-xml"><pre><span class="nt">&lt;com.devspark.robototextview.widget.RobotoTextView</span>
-            <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
-            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
-            <span class="na">app:typeface=</span><span class="s">"roboto_light_italic"</span><span class="nt">/&gt;</span>
-</pre></div>
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.devspark.robototextview.widget.RobotoTextView
+            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
+            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">app</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">typeface</span>=<span class="pl-s1"><span class="pl-pds">"</span>roboto_light_italic<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
 <p>or specify a set of parameters <code>fontFamily</code>, <code>textWeight</code> and <code>textStyle</code>:</p>
 
-<div class="highlight highlight-xml"><pre><span class="nt">&lt;com.devspark.robototextview.widget.RobotoTextView</span>
-            <span class="na">android:layout_width=</span><span class="s">"wrap_content"</span>
-            <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
-            <span class="na">app:fontFamily=</span><span class="s">"roboto"</span>
-            <span class="na">app:textWeight=</span><span class="s">"light"</span>
-            <span class="na">app:textStyle=</span><span class="s">"italic"</span><span class="nt">/&gt;</span>
-</pre></div>
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.devspark.robototextview.widget.RobotoTextView
+            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
+            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">app</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">fontFamily</span>=<span class="pl-s1"><span class="pl-pds">"</span>roboto<span class="pl-pds">"</span></span>
+            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">textWeight</span>=<span class="pl-s1"><span class="pl-pds">"</span>light<span class="pl-pds">"</span></span>
+            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">textStyle</span>=<span class="pl-s1"><span class="pl-pds">"</span>italic<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
 <p>Setup typeface in code:</p>
 
 <h4>
-<a name="in-code" class="anchor" href="#in-code"><span class="octicon octicon-link"></span></a>In Code</h4>
+<a id="in-code" class="anchor" href="#in-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>In Code</h4>
 
 <p>Using parameter <code>typeface</code>:</p>
 
-<div class="highlight highlight-java"><pre><span class="n">RobotoTextView</span> <span class="n">textView</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">RobotoTextView</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
-<span class="n">Typeface</span> <span class="n">typeface</span> <span class="o">=</span> <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">obtainTypeface</span><span class="o">(</span>
-        <span class="n">context</span><span class="o">,</span> 
-        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">Typeface</span><span class="o">.</span><span class="na">ROBOTO_LIGHT_ITALIC</span><span class="o">);</span>
-<span class="n">RobotoTextViewUtils</span><span class="o">.</span><span class="na">setTypeface</span><span class="o">(</span><span class="n">textView</span><span class="o">,</span> <span class="n">typeface</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-stj">RobotoTextView</span> textView <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">RobotoTextView</span>(context);
+<span class="pl-stj">Typeface</span> typeface <span class="pl-k">=</span> <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span>obtainTypeface(
+        context, 
+        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">Typeface</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO_LIGHT_ITALIC</span>);
+<span class="pl-stj">RobotoTextViewUtils</span><span class="pl-k">.</span>setTypeface(textView, typeface);</pre></div>
 
 <p>Using parameters <code>fontFamily</code>, <code>textWeight</code> and <code>textStyle</code>:</p>
 
-<div class="highlight highlight-java"><pre><span class="n">RobotoTextView</span> <span class="n">textView</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">RobotoTextView</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
-<span class="n">Typeface</span> <span class="n">typeface</span> <span class="o">=</span> <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">obtainTypeface</span><span class="o">(</span>
-        <span class="n">context</span><span class="o">,</span> 
-        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">FontFamily</span><span class="o">.</span><span class="na">ROBOTO</span><span class="o">,</span>
-        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">TextWeight</span><span class="o">.</span><span class="na">LIGHT</span><span class="o">,</span>
-        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">TextStyle</span><span class="o">.</span><span class="na">ITALIC</span><span class="o">);</span>
-<span class="n">RobotoTextViewUtils</span><span class="o">.</span><span class="na">setTypeface</span><span class="o">(</span><span class="n">textView</span><span class="o">,</span> <span class="n">typeface</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-stj">RobotoTextView</span> textView <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">RobotoTextView</span>(context);
+<span class="pl-stj">Typeface</span> typeface <span class="pl-k">=</span> <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span>obtainTypeface(
+        context, 
+        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">FontFamily</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO</span>,
+        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">TextWeight</span><span class="pl-c1"><span class="pl-k">.</span>LIGHT</span>,
+        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">TextStyle</span><span class="pl-c1"><span class="pl-k">.</span>ITALIC</span>);
+<span class="pl-stj">RobotoTextViewUtils</span><span class="pl-k">.</span>setTypeface(textView, typeface);</pre></div>
 
 <h4>
-<a name="with-span" class="anchor" href="#with-span"><span class="octicon octicon-link"></span></a>With Span</h4>
+<a id="with-span" class="anchor" href="#with-span" aria-hidden="true"><span class="octicon octicon-link"></span></a>With Span</h4>
 
 <p>Using parameter <code>typeface</code>:</p>
 
-<div class="highlight highlight-java"><pre><span class="n">RobotoTypefaceSpan</span> <span class="n">span</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">RobotoTypefaceSpan</span><span class="o">(</span>
-        <span class="n">context</span><span class="o">,</span>
-        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">Typeface</span><span class="o">.</span><span class="na">ROBOTO_BOLD</span><span class="o">);</span>
-<span class="n">Spannable</span> <span class="n">spannable</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">SpannableString</span><span class="o">(</span><span class="s">"text"</span><span class="o">);</span>
-<span class="n">spannable</span><span class="o">.</span><span class="na">setSpan</span><span class="o">(</span><span class="n">span</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">Spannable</span><span class="o">.</span><span class="na">SPAN_EXCLUSIVE_EXCLUSIVE</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-stj">RobotoTypefaceSpan</span> span <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">RobotoTypefaceSpan</span>(
+        context,
+        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">Typeface</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO_BOLD</span>);
+<span class="pl-stj">Spannable</span> spannable <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">SpannableString</span>(<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>);
+spannable<span class="pl-k">.</span>setSpan(span, <span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-stj">Spannable</span><span class="pl-c1"><span class="pl-k">.</span>SPAN_EXCLUSIVE_EXCLUSIVE</span>);</pre></div>
 
 <p>Using parameters <code>fontFamily</code>, <code>textWeight</code> and <code>textStyle</code>:</p>
 
-<div class="highlight highlight-java"><pre><span class="n">RobotoTypefaceSpan</span> <span class="n">span</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">RobotoTypefaceSpan</span><span class="o">(</span>
-        <span class="n">context</span><span class="o">,</span>
-        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">FontFamily</span><span class="o">.</span><span class="na">ROBOTO</span><span class="o">,</span>
-        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">TextWeight</span><span class="o">.</span><span class="na">LIGHT</span><span class="o">,</span>
-        <span class="n">RobotoTypefaceManager</span><span class="o">.</span><span class="na">TextStyle</span><span class="o">.</span><span class="na">ITALIC</span><span class="o">);</span>
-<span class="n">Spannable</span> <span class="n">spannable</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">SpannableString</span><span class="o">(</span><span class="s">"text"</span><span class="o">);</span>
-<span class="n">spannable</span><span class="o">.</span><span class="na">setSpan</span><span class="o">(</span><span class="n">span</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">Spannable</span><span class="o">.</span><span class="na">SPAN_EXCLUSIVE_EXCLUSIVE</span><span class="o">);</span>
-</pre></div>
+<div class="highlight highlight-java"><pre><span class="pl-stj">RobotoTypefaceSpan</span> span <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">RobotoTypefaceSpan</span>(
+        context,
+        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">FontFamily</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO</span>,
+        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">TextWeight</span><span class="pl-c1"><span class="pl-k">.</span>LIGHT</span>,
+        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">TextStyle</span><span class="pl-c1"><span class="pl-k">.</span>ITALIC</span>);
+<span class="pl-stj">Spannable</span> spannable <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">SpannableString</span>(<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>);
+spannable<span class="pl-k">.</span>setSpan(span, <span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-stj">Spannable</span><span class="pl-c1"><span class="pl-k">.</span>SPAN_EXCLUSIVE_EXCLUSIVE</span>);</pre></div>
 
 <h2>
-<a name="gradle" class="anchor" href="#gradle"><span class="octicon octicon-link"></span></a>Gradle</h2>
+<a id="gradle" class="anchor" href="#gradle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gradle</h2>
 
 <p>If you intend to use is not all fonts, the extra fonts can be removed.</p>
 
 <div class="highlight highlight-xml"><pre>android.applicationVariants.all{ variant -&gt;
     variant.mergeAssets.doFirst {
-        File fonts = file("${projectDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.2.0/assets/fonts")
+        File fonts = file("${projectDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.3.0/assets/fonts")
         if (fonts.exists()) {
             for (File file : fonts.listFiles()) {
                 if (file.getName().contains("RobotoSlab")) {
@@ -160,17 +160,10 @@
             }
         }
     }
-}
-</pre></div>
+}</pre></div>
 
 <h2>
-<a name="developed-by" class="anchor" href="#developed-by"><span class="octicon octicon-link"></span></a>Developed By</h2>
-
-<ul>
-<li>Evgeny Shishkin - <a href="mailto:johnkil78@gmail.com">johnkil78@gmail.com</a>
-</li>
-</ul><h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <pre><code>Copyright 2014 Evgeny Shishkin
 
@@ -178,7 +171,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+   http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
