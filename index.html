@@ -1,37 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Android-RobotoTextView : Implementation of a TextView and all its direct/indirect subclasses with native support for the Roboto fonts, includes the brand new Roboto Slab fonts.">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Android-RobotoTextView</title>
+    <meta charset="UTF-8">
+    <title>Android-RobotoTextView by johnkil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Android-RobotoTextView</h1>
+      <h2 class="project-tagline">Implementation of a TextView and all its direct/indirect subclasses with native support for the Roboto fonts, includes the brand new Roboto Slab fonts.</h2>
+      <a href="https://github.com/johnkil/Android-RobotoTextView" class="btn">View on GitHub</a>
+      <a href="https://github.com/johnkil/Android-RobotoTextView/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/johnkil/Android-RobotoTextView/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/johnkil/Android-RobotoTextView">View on GitHub</a>
-
-          <h1 id="project_title">Android-RobotoTextView</h1>
-          <h2 id="project_tagline">Implementation of a TextView and all its direct/indirect subclasses with native support for the Roboto fonts, includes the brand new Roboto Slab fonts.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/johnkil/Android-RobotoTextView/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/johnkil/Android-RobotoTextView/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+    <section class="main-content">
+      <h1>
 <a id="android-robototextview" class="anchor" href="#android-robototextview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android-RobotoTextView</h1>
 
 <p><a href="https://android-arsenal.com/details/1/471"><img src="https://img.shields.io/badge/Android%20Arsenal-Android--RobotoTextView-brightgreen.svg?style=flat" alt="Android Arsenal"></a></p>
@@ -62,7 +50,7 @@
 
 <p>Gradle:</p>
 
-<div class="highlight highlight-groovy"><pre>compile <span class="pl-s1"><span class="pl-pds">'</span>com.github.johnkil.android-robototextview:robototextview:2.3.0<span class="pl-pds">'</span></span></pre></div>
+<div class="highlight highlight-groovy"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.github.johnkil.android-robototextview:robototextview:2.3.0<span class="pl-pds">'</span></span></pre></div>
 
 <p>Maven:</p>
 
@@ -82,22 +70,22 @@
 <p>To setup a typeface you must specify the parameter <code>typeface</code>:</p>
 
 <div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.devspark.robototextview.widget.RobotoTextView
-            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
-            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">app</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
-            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
-            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
-            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">typeface</span>=<span class="pl-s1"><span class="pl-pds">"</span>roboto_light_italic<span class="pl-pds">"</span></span>/&gt;</pre></div>
+            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
+            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">app</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">typeface</span>=<span class="pl-s"><span class="pl-pds">"</span>roboto_light_italic<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
 <p>or specify a set of parameters <code>fontFamily</code>, <code>textWeight</code> and <code>textStyle</code>:</p>
 
 <div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.devspark.robototextview.widget.RobotoTextView
-            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
-            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">app</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
-            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
-            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
-            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">fontFamily</span>=<span class="pl-s1"><span class="pl-pds">"</span>roboto<span class="pl-pds">"</span></span>
-            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">textWeight</span>=<span class="pl-s1"><span class="pl-pds">"</span>light<span class="pl-pds">"</span></span>
-            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">textStyle</span>=<span class="pl-s1"><span class="pl-pds">"</span>italic<span class="pl-pds">"</span></span>/&gt;</pre></div>
+            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
+            <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">app</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">fontFamily</span>=<span class="pl-s"><span class="pl-pds">"</span>roboto<span class="pl-pds">"</span></span>
+            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">textWeight</span>=<span class="pl-s"><span class="pl-pds">"</span>light<span class="pl-pds">"</span></span>
+            <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">textStyle</span>=<span class="pl-s"><span class="pl-pds">"</span>italic<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
 <p>Setup typeface in code:</p>
 
@@ -106,42 +94,42 @@
 
 <p>Using parameter <code>typeface</code>:</p>
 
-<div class="highlight highlight-java"><pre><span class="pl-stj">RobotoTextView</span> textView <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">RobotoTextView</span>(context);
-<span class="pl-stj">Typeface</span> typeface <span class="pl-k">=</span> <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span>obtainTypeface(
+<div class="highlight highlight-java"><pre><span class="pl-smi">RobotoTextView</span> textView <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">RobotoTextView</span>(context);
+<span class="pl-smi">Typeface</span> typeface <span class="pl-k">=</span> <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span>obtainTypeface(
         context, 
-        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">Typeface</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO_LIGHT_ITALIC</span>);
-<span class="pl-stj">RobotoTextViewUtils</span><span class="pl-k">.</span>setTypeface(textView, typeface);</pre></div>
+        <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">Typeface</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO_LIGHT_ITALIC</span>);
+<span class="pl-smi">RobotoTextViewUtils</span><span class="pl-k">.</span>setTypeface(textView, typeface);</pre></div>
 
 <p>Using parameters <code>fontFamily</code>, <code>textWeight</code> and <code>textStyle</code>:</p>
 
-<div class="highlight highlight-java"><pre><span class="pl-stj">RobotoTextView</span> textView <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">RobotoTextView</span>(context);
-<span class="pl-stj">Typeface</span> typeface <span class="pl-k">=</span> <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span>obtainTypeface(
+<div class="highlight highlight-java"><pre><span class="pl-smi">RobotoTextView</span> textView <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">RobotoTextView</span>(context);
+<span class="pl-smi">Typeface</span> typeface <span class="pl-k">=</span> <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span>obtainTypeface(
         context, 
-        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">FontFamily</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO</span>,
-        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">TextWeight</span><span class="pl-c1"><span class="pl-k">.</span>LIGHT</span>,
-        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">TextStyle</span><span class="pl-c1"><span class="pl-k">.</span>ITALIC</span>);
-<span class="pl-stj">RobotoTextViewUtils</span><span class="pl-k">.</span>setTypeface(textView, typeface);</pre></div>
+        <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">FontFamily</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO</span>,
+        <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">TextWeight</span><span class="pl-c1"><span class="pl-k">.</span>LIGHT</span>,
+        <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">TextStyle</span><span class="pl-c1"><span class="pl-k">.</span>ITALIC</span>);
+<span class="pl-smi">RobotoTextViewUtils</span><span class="pl-k">.</span>setTypeface(textView, typeface);</pre></div>
 
 <h4>
 <a id="with-span" class="anchor" href="#with-span" aria-hidden="true"><span class="octicon octicon-link"></span></a>With Span</h4>
 
 <p>Using parameter <code>typeface</code>:</p>
 
-<div class="highlight highlight-java"><pre><span class="pl-stj">RobotoTypefaceSpan</span> span <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">RobotoTypefaceSpan</span>(
+<div class="highlight highlight-java"><pre><span class="pl-smi">RobotoTypefaceSpan</span> span <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">RobotoTypefaceSpan</span>(
         context,
-        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">Typeface</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO_BOLD</span>);
-<span class="pl-stj">Spannable</span> spannable <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">SpannableString</span>(<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>);
-spannable<span class="pl-k">.</span>setSpan(span, <span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-stj">Spannable</span><span class="pl-c1"><span class="pl-k">.</span>SPAN_EXCLUSIVE_EXCLUSIVE</span>);</pre></div>
+        <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">Typeface</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO_BOLD</span>);
+<span class="pl-smi">Spannable</span> spannable <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">SpannableString</span>(<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>);
+spannable<span class="pl-k">.</span>setSpan(span, <span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-smi">Spannable</span><span class="pl-c1"><span class="pl-k">.</span>SPAN_EXCLUSIVE_EXCLUSIVE</span>);</pre></div>
 
 <p>Using parameters <code>fontFamily</code>, <code>textWeight</code> and <code>textStyle</code>:</p>
 
-<div class="highlight highlight-java"><pre><span class="pl-stj">RobotoTypefaceSpan</span> span <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">RobotoTypefaceSpan</span>(
+<div class="highlight highlight-java"><pre><span class="pl-smi">RobotoTypefaceSpan</span> span <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">RobotoTypefaceSpan</span>(
         context,
-        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">FontFamily</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO</span>,
-        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">TextWeight</span><span class="pl-c1"><span class="pl-k">.</span>LIGHT</span>,
-        <span class="pl-stj">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-stj">TextStyle</span><span class="pl-c1"><span class="pl-k">.</span>ITALIC</span>);
-<span class="pl-stj">Spannable</span> spannable <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-stj">SpannableString</span>(<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>);
-spannable<span class="pl-k">.</span>setSpan(span, <span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-stj">Spannable</span><span class="pl-c1"><span class="pl-k">.</span>SPAN_EXCLUSIVE_EXCLUSIVE</span>);</pre></div>
+        <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">FontFamily</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO</span>,
+        <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">TextWeight</span><span class="pl-c1"><span class="pl-k">.</span>LIGHT</span>,
+        <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">TextStyle</span><span class="pl-c1"><span class="pl-k">.</span>ITALIC</span>);
+<span class="pl-smi">Spannable</span> spannable <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">SpannableString</span>(<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span>);
+spannable<span class="pl-k">.</span>setSpan(span, <span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-smi">Spannable</span><span class="pl-c1"><span class="pl-k">.</span>SPAN_EXCLUSIVE_EXCLUSIVE</span>);</pre></div>
 
 <h2>
 <a id="gradle" class="anchor" href="#gradle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gradle</h2>
@@ -179,18 +167,16 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 </code></pre>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Android-RobotoTextView maintained by <a href="https://github.com/johnkil">johnkil</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/johnkil/Android-RobotoTextView">Android-RobotoTextView</a> is maintained by <a href="https://github.com/johnkil">johnkil</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-              <script type="text/javascript">
+    </section>
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -201,6 +187,6 @@ limitations under the License.
             } catch(err) {}
           </script>
 
-
   </body>
 </html>
+
