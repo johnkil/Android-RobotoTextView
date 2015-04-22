@@ -48,8 +48,8 @@ public class RobotoTextClock extends TextClock {
      * that were specified in the XML file. This version uses a default style of
      * 0, so the only attribute values applied are those in the Context's Theme
      * and the given AttributeSet.
-     * <p/>
-     * <p/>
+     * <p>
+     * <p>
      * The method onFinishInflate() will be called after all children have been
      * added.
      *
