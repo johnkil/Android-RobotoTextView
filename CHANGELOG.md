@@ -2,6 +2,13 @@ Change Log
 ==========
 
 
+Version 2.4.0 *(2015-04-22)*
+----------------------------
+
+* Support AppCompat widgets from [AppCompat v22.1](http://android-developers.blogspot.ru/2015/04/android-support-library-221.html).
+* Support Gradle 1.1.
+
+
 Version 2.3.0 *(2015-01-23)*
 ----------------------------
 
@@ -12,7 +19,7 @@ Version 2.3.0 *(2015-01-23)*
 Version 2.2.0 *(2014-10-06)*
 ----------------------------
 
-* Imlemented `RobotoTypefaceSpan`.
+* Implemented `RobotoTypefaceSpan`.
 * Use Anti-Alias rendering.
 * Support Gradle 0.13.
 
