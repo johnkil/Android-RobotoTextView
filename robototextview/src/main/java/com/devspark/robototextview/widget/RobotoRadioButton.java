@@ -17,7 +17,7 @@
 package com.devspark.robototextview.widget;
 
 import android.content.Context;
-import android.support.v7.internal.widget.TintRadioButton;
+import android.support.v7.widget.AppCompatRadioButton;
 import android.util.AttributeSet;
 import android.widget.RadioButton;
 
@@ -28,7 +28,7 @@ import com.devspark.robototextview.util.RobotoTextViewUtils;
  *
  * @author Evgeny Shishkin
  */
-public class RobotoRadioButton extends TintRadioButton {
+public class RobotoRadioButton extends AppCompatRadioButton {
 
     /**
      * Simple constructor to use when creating a widget from code.

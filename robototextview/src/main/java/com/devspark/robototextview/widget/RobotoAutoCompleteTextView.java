@@ -17,6 +17,7 @@
 package com.devspark.robototextview.widget;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.util.AttributeSet;
 import android.widget.AutoCompleteTextView;
 
@@ -27,7 +28,7 @@ import com.devspark.robototextview.util.RobotoTextViewUtils;
  *
  * @author Evgeny Shishkin
  */
-public class RobotoAutoCompleteTextView extends AutoCompleteTextView {
+public class RobotoAutoCompleteTextView extends AppCompatAutoCompleteTextView {
 
     /**
      * Simple constructor to use when creating a widget from code.

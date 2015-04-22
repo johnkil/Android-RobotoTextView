@@ -17,7 +17,7 @@
 package com.devspark.robototextview.widget;
 
 import android.content.Context;
-import android.support.v7.internal.widget.TintEditText;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
@@ -28,7 +28,7 @@ import com.devspark.robototextview.util.RobotoTextViewUtils;
  *
  * @author Evgeny Shishkin
  */
-public class RobotoEditText extends TintEditText {
+public class RobotoEditText extends AppCompatEditText {
 
     /**
      * Simple constructor to use when creating a widget from code.
