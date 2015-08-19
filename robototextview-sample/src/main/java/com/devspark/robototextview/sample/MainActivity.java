@@ -23,9 +23,7 @@ import android.support.v7.app.AppCompatActivity;
  * @author Evgeny Shishkin
  */
 public class MainActivity extends AppCompatActivity {
-    /**
-     * Called when the activity is first created.
-     */
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

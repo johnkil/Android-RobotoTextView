@@ -1,28 +1,16 @@
 apply plugin: 'com.android.library'
 
-android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
-
-    defaultConfig {
-        minSdkVersion 7
-        targetSdkVersion 22
-        versionCode 12
-        versionName "2.4.0"
-    }
-
-    sourceSets {
-        main {
-            manifest.srcFile 'src/main/AndroidManifest.xml'
-            java.srcDirs = ['src/main/java']
-            res.srcDirs = ['src/main/res']
-            assets.srcDirs = ['src/main/assets']
-        }
-    }
+dependencies {
+    compile rootProject.ext.supportAppCompat
 }
 
-dependencies {
-    compile 'com.android.support:appcompat-v7:22.1.1'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+    }
 }
 
 // Used to push in maven

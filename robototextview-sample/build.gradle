@@ -1,19 +1,18 @@
 apply plugin: 'com.android.application'
 
+dependencies {
+    compile project(':robototextview')
+}
+
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "com.devspark.robototextview.sample"
-        minSdkVersion 7
-        targetSdkVersion 22
-        versionCode 12
-        versionName "2.4.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.compileSdkVersion
+        versionCode 1
+        versionName "$VERSION_NAME"
     }
-}
-
-dependencies {
-    compile project(':robototextview')
-    compile 'com.android.support:appcompat-v7:22.1.1'
 }
