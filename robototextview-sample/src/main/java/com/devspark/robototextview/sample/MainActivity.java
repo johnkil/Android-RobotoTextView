@@ -19,9 +19,6 @@ package com.devspark.robototextview.sample;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * @author Evgeny Shishkin
- */
 public class MainActivity extends AppCompatActivity {
 
     @Override
