@@ -2,6 +2,14 @@ Change Log
 ==========
 
 
+## Version 2.4.2
+
+_2015-08-31_
+
+ * Sync roboto fonts with latest version from [Google Fonts](https://www.google.com/fonts/specimen/Roboto).
+ * Fix: Russian rouble glyph in pre-lollipop android.
+
+
 ## Version 2.4.1
 
 _2015-08-19_
