@@ -16,9 +16,8 @@
 
 package com.devspark.robototextview.widget;
 
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.os.Build;
+import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
 import android.widget.Switch;
 
@@ -29,8 +28,7 @@ import com.devspark.robototextview.util.RobotoTextViewUtils;
  *
  * @author Evgeny Shishkin
  */
-@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
-public class RobotoSwitch extends Switch {
+public class RobotoSwitch extends SwitchCompat {
 
     /**
      * Simple constructor to use when creating a widget from code.
