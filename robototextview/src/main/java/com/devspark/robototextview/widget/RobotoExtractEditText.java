@@ -20,7 +20,7 @@ import android.content.Context;
 import android.inputmethodservice.ExtractEditText;
 import android.util.AttributeSet;
 
-import com.devspark.robototextview.util.RobotoTextViewUtils;
+import com.devspark.robototextview.util.RobotoTypefaceUtils;
 
 /**
  * Implementation of a {@link ExtractEditText} with native support for all the Roboto fonts.
@@ -59,7 +59,7 @@ public class RobotoExtractEditText extends ExtractEditText {
         super(context, attrs);
 
         if (!isInEditMode()) {
-            RobotoTextViewUtils.initTypeface(this, context, attrs);
+            RobotoTypefaceUtils.initView(this, context, attrs);
         }
     }
 
@@ -81,7 +81,7 @@ public class RobotoExtractEditText extends ExtractEditText {
         super(context, attrs, defStyle);
 
         if (!isInEditMode()) {
-            RobotoTextViewUtils.initTypeface(this, context, attrs);
+            RobotoTypefaceUtils.initView(this, context, attrs);
         }
     }
 

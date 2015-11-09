@@ -2,10 +2,11 @@ package com.devspark.robototextview.style;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
 
-import com.devspark.robototextview.util.RobotoTextViewUtils;
+import com.devspark.robototextview.util.RobotoTypefaceUtils;
 import com.devspark.robototextview.util.RobotoTypefaceManager;
 
 /**
@@ -52,14 +53,21 @@ public class RobotoTypefaceSpan extends MetricAffectingSpan {
         mTypeface = RobotoTypefaceManager.obtainTypeface(context, fontFamily, textWeight, textStyle);
     }
 
-    @Override
-    public void updateDrawState(TextPaint ds) {
-        RobotoTextViewUtils.setTypeface(ds, mTypeface);
+    /**
+     * Returns the typeface specified by this span.
+     */
+    @NonNull
+    public Typeface getTypeface() {
+        return mTypeface;
     }
 
     @Override
-    public void updateMeasureState(TextPaint paint) {
-        RobotoTextViewUtils.setTypeface(paint, mTypeface);
+    public void updateDrawState(TextPaint tp) {
+        updateMeasureState(tp);
     }
 
+    @Override
+    public void updateMeasureState(TextPaint tp) {
+        RobotoTypefaceUtils.setup(tp, mTypeface);
+    }
 }

@@ -21,7 +21,7 @@ import android.support.v7.widget.SwitchCompat;
 import android.util.AttributeSet;
 import android.widget.Switch;
 
-import com.devspark.robototextview.util.RobotoTextViewUtils;
+import com.devspark.robototextview.util.RobotoTypefaceUtils;
 
 /**
  * Implementation of a {@link Switch} with native support for all the Roboto fonts.
@@ -60,7 +60,7 @@ public class RobotoSwitch extends SwitchCompat {
         super(context, attrs);
 
         if (!isInEditMode()) {
-            RobotoTextViewUtils.initTypeface(this, context, attrs);
+            RobotoTypefaceUtils.initView(this, context, attrs);
         }
     }
 
@@ -82,7 +82,7 @@ public class RobotoSwitch extends SwitchCompat {
         super(context, attrs, defStyle);
 
         if (!isInEditMode()) {
-            RobotoTextViewUtils.initTypeface(this, context, attrs);
+            RobotoTypefaceUtils.initView(this, context, attrs);
         }
     }
 
