@@ -2,6 +2,14 @@ Change Log
 ==========
 
 
+## Version 2.4.3
+
+_2015-09-11_
+
+ * Implemented `RobotoTextAppearanceSpan`.
+ * Updated build tools and dependencies (Gradle Plugin 1.5.0-beta2, AppCompat v23.1).
+
+
 ## Version 2.4.2
 
 _2015-08-31_
