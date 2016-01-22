@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0-beta2'
+        classpath 'com.android.tools.build:gradle:2.0.0-alpha6'
     }
 }
 
@@ -19,5 +19,5 @@ ext {
     buildToolsVersion = '23.0.2'
 
     // Android dependencies.
-    supportAppCompat = 'com.android.support:appcompat-v7:23.1.0'
+    supportAppCompat = 'com.android.support:appcompat-v7:23.1.1'
 }
