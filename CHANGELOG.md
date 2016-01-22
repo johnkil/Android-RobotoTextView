@@ -2,6 +2,15 @@ Change Log
 ==========
 
 
+## Version 2.5.0
+
+_2016-01-22_
+
+ * Support brand new `Roboto Mono` typefaces.
+ * Rename method for set up typeface for TextView/Paint (`setup(...)` -> `setUp(...)`).
+ * Updated build tools and dependencies (Gradle Plugin 2.0.0-alpha6, AppCompat v23.1.1).
+
+
 ## Version 2.4.3
 
 _2015-09-11_

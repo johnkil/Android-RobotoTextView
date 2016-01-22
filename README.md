@@ -3,13 +3,14 @@ Android-RobotoTextView
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android--RobotoTextView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/471)
 
-Implementation of a [TextView](http://developer.android.com/reference/android/widget/TextView.html) and all its direct/indirect subclasses with native support for the [Roboto](http://www.google.com/design/spec/style/typography.html) fonts, includes the brand new [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab) fonts.
+Implementation of a [TextView][6] and all its direct/indirect subclasses with native support for the [Roboto][5] fonts, includes the brand new [Roboto Slab][3] and [Roboto Mono][4] fonts.
 
 Supported fonts:
 
-* [Roboto](http://www.google.com/fonts/specimen/Roboto)
-* [Roboto Condensed](http://www.google.com/fonts/specimen/Roboto+Condensed)
-* [Roboto Slab](http://www.google.com/fonts/specimen/Roboto+Slab)
+* [Roboto][1]
+* [Roboto Condensed][2]
+* [Roboto Slab][3]
+* [Roboto Mono][4]
 
 ![image](https://raw.githubusercontent.com/johnkil/Android-RobotoTextView/master/art/RobotoTextView.jpg)
 
@@ -31,7 +32,7 @@ Download
 Gradle:
 
 ```groovy
-compile 'com.github.johnkil.android-robototextview:robototextview:2.4.3'
+compile 'com.github.johnkil.android-robototextview:robototextview:2.5.0'
 ```
 
 Maven:
@@ -40,7 +41,7 @@ Maven:
 <dependency>
     <groupId>com.github.johnkil.android-robototextview</groupId>
     <artifactId>robototextview</artifactId>
-    <version>2.4.3</version>
+    <version>2.5.0</version>
     <type>aar</type>
 </dependency>
 ```
@@ -84,7 +85,7 @@ RobotoTextView textView = new RobotoTextView(context);
 Typeface typeface = RobotoTypefaceManager.obtainTypeface(
         context, 
         RobotoTypefaceManager.Typeface.ROBOTO_LIGHT_ITALIC);
-RobotoTextViewUtils.setTypeface(textView, typeface);
+RobotoTextViewUtils.setUp(textView, typeface);
 ```
 
 Using parameters `fontFamily`, `textWeight` and `textStyle`:
@@ -95,7 +96,7 @@ Typeface typeface = RobotoTypefaceManager.obtainTypeface(
         RobotoTypefaceManager.FontFamily.ROBOTO,
         RobotoTypefaceManager.TextWeight.LIGHT,
         RobotoTypefaceManager.TextStyle.ITALIC);
-RobotoTextViewUtils.setTypeface(textView, typeface);
+RobotoTextViewUtils.setUp(textView, typeface);
 ```
 
 #### With Span
@@ -128,7 +129,7 @@ If you intend to use is not all fonts, the extra fonts can be removed.
 ``` xml
 android.applicationVariants.all{ variant ->
     variant.mergeAssets.doFirst {
-        File fonts = file("${projectDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.4.3/assets/fonts")
+        File fonts = file("${projectDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.5.0/assets/fonts")
         if (fonts.exists()) {
             for (File file : fonts.listFiles()) {
                 if (file.getName().contains("RobotoSlab")) {
@@ -159,5 +160,12 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
+
+[1]: https://www.google.com/fonts/specimen/Roboto
+[2]: https://www.google.com/fonts/specimen/Roboto+Condensed
+[3]: https://www.google.com/fonts/specimen/Roboto+Slab
+[4]: https://www.google.com/fonts/specimen/Roboto+Mono
+[5]: http://www.google.com/design/spec/style/typography.html
+[6]: http://developer.android.com/reference/android/widget/TextView.html
 
 [0]: https://github.com/google/roboto
