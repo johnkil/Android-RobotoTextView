@@ -149,7 +149,7 @@ public class RobotoTextAppearanceSpan extends MetricAffectingSpan {
 
     @Override
     public void updateMeasureState(TextPaint tp) {
-        RobotoTypefaceUtils.setup(tp, mTypeface);
+        RobotoTypefaceUtils.setUp(tp, mTypeface);
         if (mTextSize > 0) {
             tp.setTextSize(mTextSize);
         }

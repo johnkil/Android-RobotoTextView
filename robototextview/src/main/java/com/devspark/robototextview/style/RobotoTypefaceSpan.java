@@ -68,6 +68,6 @@ public class RobotoTypefaceSpan extends MetricAffectingSpan {
 
     @Override
     public void updateMeasureState(TextPaint tp) {
-        RobotoTypefaceUtils.setup(tp, mTypeface);
+        RobotoTypefaceUtils.setUp(tp, mTypeface);
     }
 }

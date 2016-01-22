@@ -56,7 +56,7 @@ public final class RobotoTypefaceUtils {
             typeface = RobotoTypefaceManager.obtainTypeface(context, RobotoTypefaceManager.Typeface.ROBOTO_REGULAR);
         }
 
-        setup(textView, typeface);
+        setUp(textView, typeface);
     }
 
     @NonNull
@@ -75,24 +75,24 @@ public final class RobotoTypefaceUtils {
     }
 
     /**
-     * Setup typeface for TextView. Wrapper over {@link android.widget.TextView#setTypeface(android.graphics.Typeface)}
+     * Set up typeface for TextView. Wrapper over {@link android.widget.TextView#setTypeface(android.graphics.Typeface)}
      * for making the font anti-aliased.
      *
      * @param textView The text view
      * @param typeface The specify typeface
      */
-    public static void setup(@NonNull TextView textView, @NonNull Typeface typeface) {
+    public static void setUp(@NonNull TextView textView, @NonNull Typeface typeface) {
         textView.setPaintFlags(textView.getPaintFlags() | Paint.SUBPIXEL_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
         textView.setTypeface(typeface);
     }
 
     /**
-     * Setup typeface for Paint.
+     * Set up typeface for Paint.
      *
      * @param paint    The paint
      * @param typeface The specify typeface
      */
-    public static void setup(@NonNull Paint paint, @NonNull Typeface typeface) {
+    public static void setUp(@NonNull Paint paint, @NonNull Typeface typeface) {
         paint.setFlags(paint.getFlags() | Paint.SUBPIXEL_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
         paint.setTypeface(typeface);
     }
