@@ -223,6 +223,76 @@ public class RobotoTypefaceManager {
                 throw new IllegalArgumentException("`textWeight` attribute value " + textWeight +
                         " is not supported for this font family " + fontFamily);
             }
+        } else if (fontFamily == FontFamily.ROBOTO_MONO) {
+            if (textWeight == TextWeight.NORMAL) {
+                switch (textStyle) {
+                    case TextStyle.NORMAL:
+                        typeface = Typeface.ROBOTO_MONO_REGULAR;
+                        break;
+                    case TextStyle.ITALIC:
+                        typeface = Typeface.ROBOTO_MONO_ITALIC;
+                        break;
+                    default:
+                        throw new IllegalArgumentException("`textStyle` attribute value " + textStyle +
+                                " is not supported for this fontFamily " + fontFamily +
+                                " and textWeight " + textWeight);
+                }
+            } else if (textWeight == TextWeight.THIN) {
+                switch (textStyle) {
+                    case TextStyle.NORMAL:
+                        typeface = Typeface.ROBOTO_MONO_THIN;
+                        break;
+                    case TextStyle.ITALIC:
+                        typeface = Typeface.ROBOTO_MONO_THIN_ITALIC;
+                        break;
+                    default:
+                        throw new IllegalArgumentException("`textStyle` attribute value " + textStyle +
+                                " is not supported for this fontFamily " + fontFamily +
+                                " and textWeight " + textWeight);
+                }
+            } else if (textWeight == TextWeight.LIGHT) {
+                switch (textStyle) {
+                    case TextStyle.NORMAL:
+                        typeface = Typeface.ROBOTO_MONO_LIGHT;
+                        break;
+                    case TextStyle.ITALIC:
+                        typeface = Typeface.ROBOTO_MONO_LIGHT_ITALIC;
+                        break;
+                    default:
+                        throw new IllegalArgumentException("`textStyle` attribute value " + textStyle +
+                                " is not supported for this fontFamily " + fontFamily +
+                                " and textWeight " + textWeight);
+                }
+            } else if (textWeight == TextWeight.MEDIUM) {
+                switch (textStyle) {
+                    case TextStyle.NORMAL:
+                        typeface = Typeface.ROBOTO_MONO_MEDIUM;
+                        break;
+                    case TextStyle.ITALIC:
+                        typeface = Typeface.ROBOTO_MONO_MEDIUM_ITALIC;
+                        break;
+                    default:
+                        throw new IllegalArgumentException("`textStyle` attribute value " + textStyle +
+                                " is not supported for this fontFamily " + fontFamily +
+                                " and textWeight " + textWeight);
+                }
+            } else if (textWeight == TextWeight.BOLD) {
+                switch (textStyle) {
+                    case TextStyle.NORMAL:
+                        typeface = Typeface.ROBOTO_MONO_BOLD;
+                        break;
+                    case TextStyle.ITALIC:
+                        typeface = Typeface.ROBOTO_MONO_BOLD_ITALIC;
+                        break;
+                    default:
+                        throw new IllegalArgumentException("`textStyle` attribute value " + textStyle +
+                                " is not supported for this fontFamily " + fontFamily +
+                                " and textWeight " + textWeight);
+                }
+            } else {
+                throw new IllegalArgumentException("`textWeight` attribute value " + textWeight +
+                        " is not supported for this font family " + fontFamily);
+            }
         } else {
             throw new IllegalArgumentException("Unknown `fontFamily` attribute value " + fontFamily);
         }
@@ -307,6 +377,36 @@ public class RobotoTypefaceManager {
             case Typeface.ROBOTO_SLAB_BOLD:
                 typefacePath = "fonts/RobotoSlab-Bold.ttf";
                 break;
+            case Typeface.ROBOTO_MONO_THIN:
+                typefacePath = "fonts/RobotoMono-Thin.ttf";
+                break;
+            case Typeface.ROBOTO_MONO_THIN_ITALIC:
+                typefacePath = "fonts/RobotoMono-ThinItalic.ttf";
+                break;
+            case Typeface.ROBOTO_MONO_LIGHT:
+                typefacePath = "fonts/RobotoMono-Light.ttf";
+                break;
+            case Typeface.ROBOTO_MONO_LIGHT_ITALIC:
+                typefacePath = "fonts/RobotoMono-LightItalic.ttf";
+                break;
+            case Typeface.ROBOTO_MONO_REGULAR:
+                typefacePath = "fonts/RobotoMono-Regular.ttf";
+                break;
+            case Typeface.ROBOTO_MONO_ITALIC:
+                typefacePath = "fonts/RobotoMono-Italic.ttf";
+                break;
+            case Typeface.ROBOTO_MONO_MEDIUM:
+                typefacePath = "fonts/RobotoMono-Medium.ttf";
+                break;
+            case Typeface.ROBOTO_MONO_MEDIUM_ITALIC:
+                typefacePath = "fonts/RobotoMono-MediumItalic.ttf";
+                break;
+            case Typeface.ROBOTO_MONO_BOLD:
+                typefacePath = "fonts/RobotoMono-Bold.ttf";
+                break;
+            case Typeface.ROBOTO_MONO_BOLD_ITALIC:
+                typefacePath = "fonts/RobotoMono-BoldItalic.ttf";
+                break;
             default:
                 throw new IllegalArgumentException("Unknown `typeface` attribute value " + typefaceValue);
         }
@@ -340,6 +440,16 @@ public class RobotoTypefaceManager {
         public final static int ROBOTO_SLAB_LIGHT = 19;
         public final static int ROBOTO_SLAB_REGULAR = 20;
         public final static int ROBOTO_SLAB_BOLD = 21;
+        public final static int ROBOTO_MONO_THIN = 22;
+        public final static int ROBOTO_MONO_THIN_ITALIC = 23;
+        public final static int ROBOTO_MONO_LIGHT = 24;
+        public final static int ROBOTO_MONO_LIGHT_ITALIC = 25;
+        public final static int ROBOTO_MONO_REGULAR = 26;
+        public final static int ROBOTO_MONO_ITALIC = 27;
+        public final static int ROBOTO_MONO_MEDIUM = 28;
+        public final static int ROBOTO_MONO_MEDIUM_ITALIC = 29;
+        public final static int ROBOTO_MONO_BOLD = 30;
+        public final static int ROBOTO_MONO_BOLD_ITALIC = 31;
     }
 
     /**
@@ -349,6 +459,7 @@ public class RobotoTypefaceManager {
         public static final int ROBOTO = 0;
         public static final int ROBOTO_CONDENSED = 1;
         public static final int ROBOTO_SLAB = 2;
+        public static final int ROBOTO_MONO = 3;
     }
 
     /**
@@ -370,5 +481,4 @@ public class RobotoTypefaceManager {
         public static final int NORMAL = 0;
         public static final int ITALIC = 1;
     }
-
 }

@@ -170,7 +170,7 @@
             <com.devspark.robototextview.widget.RobotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Condensed Light Italic"
+                android:text="Light Italic"
                 android:textSize="22sp"
                 app:typeface="roboto_condensed_light_italic"/>
 
@@ -184,14 +184,14 @@
             <com.devspark.robototextview.widget.RobotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Roboto Condensed &amp; "
+                android:text="Roboto Condensed Regular &amp; "
                 android:textSize="22sp"
                 app:typeface="roboto_condensed_regular"/>
 
             <com.devspark.robototextview.widget.RobotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Condensed Italic"
+                android:text="Italic"
                 android:textSize="22sp"
                 app:typeface="roboto_condensed_italic"/>
 
@@ -212,7 +212,7 @@
             <com.devspark.robototextview.widget.RobotoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Condensed Bold Italic"
+                android:text="Bold Italic"
                 android:textSize="22sp"
                 app:typeface="roboto_condensed_bold_italic"/>
         </LinearLayout>
@@ -269,6 +269,111 @@
                 android:text="Roboto Slab Bold"
                 android:textSize="22sp"
                 app:typeface="roboto_slab_bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roboto Mono Thin &amp; "
+                android:textSize="22sp"
+                app:typeface="roboto_mono_thin"/>
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thin Italic"
+                android:textSize="22sp"
+                app:typeface="roboto_mono_thin_italic"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roboto Mono Light &amp; "
+                android:textSize="22sp"
+                app:typeface="roboto_mono_light"/>
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Light Italic"
+                android:textSize="22sp"
+                app:typeface="roboto_mono_light_italic"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roboto Mono Regular &amp; "
+                android:textSize="22sp"
+                app:typeface="roboto_mono_regular"/>
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Italic"
+                android:textSize="22sp"
+                app:typeface="roboto_mono_italic"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roboto Mono Medium &amp; "
+                android:textSize="22sp"
+                app:typeface="roboto_mono_medium"/>
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium Italic"
+                android:textSize="22sp"
+                app:typeface="roboto_mono_medium_italic"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roboto Mono Bold &amp; "
+                android:textSize="22sp"
+                app:typeface="roboto_mono_bold"/>
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bold Italic"
+                android:textSize="22sp"
+                app:typeface="roboto_mono_bold_italic"/>
 
         </LinearLayout>
 

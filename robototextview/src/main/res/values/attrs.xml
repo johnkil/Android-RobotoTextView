@@ -146,12 +146,23 @@
         <enum name="roboto_slab_light" value="19"/>
         <enum name="roboto_slab_regular" value="20"/>
         <enum name="roboto_slab_bold" value="21"/>
+        <enum name="roboto_mono_thin" value="22"/>
+        <enum name="roboto_mono_thin_italic" value="23"/>
+        <enum name="roboto_mono_light" value="24"/>
+        <enum name="roboto_mono_light_italic" value="25"/>
+        <enum name="roboto_mono_regular" value="26"/>
+        <enum name="roboto_mono_italic" value="27"/>
+        <enum name="roboto_mono_medium" value="28"/>
+        <enum name="roboto_mono_medium_italic" value="29"/>
+        <enum name="roboto_mono_bold" value="30"/>
+        <enum name="roboto_mono_bold_italic" value="31"/>
     </attr>
 
     <attr name="fontFamily">
         <enum name="roboto" value="0"/>
         <enum name="roboto_condensed" value="1"/>
         <enum name="roboto_slab" value="2"/>
+        <enum name="roboto_mono" value="3"/>
     </attr>
 
     <attr name="textWeight">
