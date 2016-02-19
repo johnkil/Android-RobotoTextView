@@ -85,7 +85,7 @@ RobotoTextView textView = new RobotoTextView(context);
 Typeface typeface = RobotoTypefaceManager.obtainTypeface(
         context, 
         RobotoTypefaceManager.Typeface.ROBOTO_LIGHT_ITALIC);
-RobotoTextViewUtils.setUp(textView, typeface);
+RobotoTypefaceUtils.setUp(textView, typeface);
 ```
 
 Using parameters `fontFamily`, `textWeight` and `textStyle`:
@@ -96,7 +96,7 @@ Typeface typeface = RobotoTypefaceManager.obtainTypeface(
         RobotoTypefaceManager.FontFamily.ROBOTO,
         RobotoTypefaceManager.TextWeight.LIGHT,
         RobotoTypefaceManager.TextStyle.ITALIC);
-RobotoTextViewUtils.setUp(textView, typeface);
+RobotoTypefaceUtils.setUp(textView, typeface);
 ```
 
 #### With Span
