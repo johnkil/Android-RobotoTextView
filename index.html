@@ -68,7 +68,7 @@
 <h4>
 <a id="in-xml" class="anchor" href="#in-xml" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>In XML</h4>
 
-<p>To setup a typeface you must specify the parameter <code>typeface</code>:</p>
+<p>To set up a typeface you must specify the parameter <code>typeface</code>:</p>
 
 <div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">com</span>.devspark.robototextview.widget.RobotoTextView
             <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">android</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res/android<span class="pl-pds">"</span></span>
@@ -88,7 +88,7 @@
             <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">textWeight</span>=<span class="pl-s"><span class="pl-pds">"</span>light<span class="pl-pds">"</span></span>
             <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">textStyle</span>=<span class="pl-s"><span class="pl-pds">"</span>italic<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
-<p>Setup typeface in code:</p>
+<p>Set up typeface in code:</p>
 
 <h4>
 <a id="in-code" class="anchor" href="#in-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>In Code</h4>
@@ -99,7 +99,7 @@
 <span class="pl-smi">Typeface</span> typeface <span class="pl-k">=</span> <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span>obtainTypeface(
         context, 
         <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">Typeface</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO_LIGHT_ITALIC</span>);
-<span class="pl-smi">RobotoTextViewUtils</span><span class="pl-k">.</span>setUp(textView, typeface);</pre></div>
+<span class="pl-smi">RobotoTypefaceUtils</span><span class="pl-k">.</span>setUp(textView, typeface);</pre></div>
 
 <p>Using parameters <code>fontFamily</code>, <code>textWeight</code> and <code>textStyle</code>:</p>
 
@@ -109,7 +109,7 @@
         <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">FontFamily</span><span class="pl-c1"><span class="pl-k">.</span>ROBOTO</span>,
         <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">TextWeight</span><span class="pl-c1"><span class="pl-k">.</span>LIGHT</span>,
         <span class="pl-smi">RobotoTypefaceManager</span><span class="pl-k">.</span><span class="pl-smi">TextStyle</span><span class="pl-c1"><span class="pl-k">.</span>ITALIC</span>);
-<span class="pl-smi">RobotoTextViewUtils</span><span class="pl-k">.</span>setUp(textView, typeface);</pre></div>
+<span class="pl-smi">RobotoTypefaceUtils</span><span class="pl-k">.</span>setUp(textView, typeface);</pre></div>
 
 <h4>
 <a id="with-span" class="anchor" href="#with-span" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>With Span</h4>
