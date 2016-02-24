@@ -52,7 +52,7 @@ Usage
 
 #### In XML
 
-To setup a typeface you must specify the parameter `typeface`:
+To set up a typeface you must specify the parameter `typeface`:
 
 ``` xml
 <com.devspark.robototextview.widget.RobotoTextView
@@ -75,7 +75,7 @@ or specify a set of parameters `fontFamily`, `textWeight` and `textStyle`:
             app:textStyle="italic"/>
 ```
 
-Setup typeface in code:
+Set up typeface in code:
 
 #### In Code
 
