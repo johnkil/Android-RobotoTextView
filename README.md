@@ -23,7 +23,7 @@ Supported fonts:
 Compatibility
 -------------
 
-This library is compatible from API 7 (Android 2.1).
+This library is compatible from API 9 (Android 2.3).
 
 
 Download
@@ -32,7 +32,7 @@ Download
 Gradle:
 
 ```groovy
-compile 'com.github.johnkil.android-robototextview:robototextview:2.5.0'
+compile 'com.github.johnkil.android-robototextview:robototextview:2.5.1'
 ```
 
 Maven:
@@ -41,7 +41,7 @@ Maven:
 <dependency>
     <groupId>com.github.johnkil.android-robototextview</groupId>
     <artifactId>robototextview</artifactId>
-    <version>2.5.0</version>
+    <version>2.5.1</version>
     <type>aar</type>
 </dependency>
 ```
@@ -129,7 +129,7 @@ If you intend to use is not all fonts, the extra fonts can be removed.
 ``` xml
 android.applicationVariants.all{ variant ->
     variant.mergeAssets.doFirst {
-        File fonts = file("${projectDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.5.0/assets/fonts")
+        File fonts = file("${projectDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.5.1/assets/fonts")
         if (fonts.exists()) {
             for (File file : fonts.listFiles()) {
                 if (file.getName().contains("RobotoSlab")) {

@@ -2,6 +2,13 @@ Change Log
 ==========
 
 
+## Version 2.5.1
+
+_2016-08-26_
+
+ * Support AppCompat v24.2.
+
+
 ## Version 2.5.0
 
 _2016-01-22_
