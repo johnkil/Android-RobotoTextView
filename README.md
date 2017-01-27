@@ -126,10 +126,10 @@ Gradle
 
 If you intend to use is not all fonts, the extra fonts can be removed.
 
-``` xml
+``` gradle
 android.applicationVariants.all{ variant ->
-    variant.mergeAssets.doFirst {
-        File fonts = file("${projectDir}/build/intermediates/exploded-aar/com.github.johnkil.android-robototextview/robototextview/2.5.1/assets/fonts")
+    variant.mergeAssets.doLast {
+        File fonts = file("$variant.mergeAssets.outputDir/fonts")
         if (fonts.exists()) {
             for (File file : fonts.listFiles()) {
                 if (file.getName().contains("RobotoSlab")) {
