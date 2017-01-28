@@ -7,14 +7,23 @@ class RobotoTextViewPlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
-        if(project.pluginManager.findPlugin('com.android.application') == null) {
-            project.logger.error('Error: plugin \'com.android.application\' required for \'com.devspark.robototextview.gradle-plugin\'')
+        def applicationPluginApplied = project.pluginManager.findPlugin('com.android.application') != null;
+        def libraryPluginApplied = project.pluginManager.findPlugin('com.android.library') != null;
+
+        def variants
+        if(applicationPluginApplied) {
+            variants = project.android.applicationVariants
+        } else if(libraryPluginApplied) {
+            variants = project.android.libraryVariants
+        } else {
+            project.logger.error('Error: plugins "com.android.application" or "com.android.library" ' +
+                    'required for "com.devspark.robototextview.gradle-plugin"')
             return
         }
 
         project.extensions.create("robototextview", RobotoTextViewPluginExtension)
 
-        project.android.applicationVariants.all { variant ->
+        variants.all { variant ->
             variant.mergeAssets.doLast {
                 def fonts = project.file("$variant.mergeAssets.outputDir/fonts")
                 if (!fonts.exists()) {
