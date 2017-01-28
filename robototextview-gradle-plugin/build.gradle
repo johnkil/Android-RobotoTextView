@@ -1,0 +1,9 @@
+apply plugin: 'groovy'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.android.tools.build:gradle:2.2.0'
+}
