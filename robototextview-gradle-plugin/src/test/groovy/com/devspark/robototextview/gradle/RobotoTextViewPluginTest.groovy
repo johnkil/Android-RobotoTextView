@@ -17,13 +17,13 @@ class RobotoTextViewPluginTest {
             classpath 'com.android.tools.build:gradle:2.2.0'
         }
 
-        project.plugins.apply(AppPlugin.class)
-        project.plugins.apply(RobotoTextViewPlugin.class)
+        project.plugins.apply(AppPlugin)
+        project.plugins.apply(RobotoTextViewPlugin)
     }
 
     @Test
     void testApplyWithoutAndroidPlugin() {
         Project project = ProjectBuilder.builder().build()
-        project.plugins.apply(RobotoTextViewPlugin.class)
+        project.plugins.apply(RobotoTextViewPlugin)
     }
 }
