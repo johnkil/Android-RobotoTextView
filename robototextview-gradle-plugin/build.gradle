@@ -1,9 +1,17 @@
 apply plugin: 'groovy'
+apply plugin: 'java-gradle-plugin'
+
+test {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    systemProperty 'android.sdk.dir', properties.getProperty('sdk.dir')
+}
 
 dependencies {
     compile gradleApi()
     compile localGroovy()
 
+    testCompile gradleTestKit()
     testCompile 'junit:junit:4.12'
     testCompile 'com.android.tools.build:gradle:2.2.0'
 }
