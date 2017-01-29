@@ -28,7 +28,7 @@ class RobotoTextViewPlugin implements Plugin<Project> {
                 variant.mergeAssets.doLast {
                     def fonts = project.file("$variant.mergeAssets.outputDir/fonts")
                     if (!fonts.exists()) {
-                        project.logger.warn("Warning: " + fonts.absolutePath + " isn't exists")
+                        project.logger.warn("Warning: $fonts.absolutePath isn't exists")
                         return
                     }
 
@@ -36,29 +36,52 @@ class RobotoTextViewPlugin implements Plugin<Project> {
 
                     def included = project.robototextview.include
                     if (included != null) {
-                        fonts.eachFile { file ->
-                            included.each { delete(project, file, !file.name.startsWith((it)), log) }
-                        }
+                        fonts.eachFile { processIncluded(project, (it), included, log) }
                     }
 
                     def excluded = project.robototextview.exclude
                     if (excluded != null) {
-                        fonts.eachFile { file ->
-                            excluded.each { delete(project, file, file.name.startsWith((it)), log) }
-                        }
+                        fonts.eachFile { processExcluded(project, (it), excluded, log) }
                     }
                 }
             }
         }
     }
 
-    private static void delete(Project project, File file, boolean delete, boolean log) {
-        if (!delete) {
-            return
+    private static void processIncluded(project, file, included, log) {
+        def keep = false
+        included.each {
+            if (isTargetFont(file, (it))) {
+                keep = true
+            }
         }
 
-        project.delete(file)
+        if (!keep) {
+            project.delete(file)
+            reportResult(project, file, log)
+        }
+    }
 
+    private static void processExcluded(project, file, excluded, log) {
+        def delete = false
+        excluded.each {
+            if (isTargetFont(file, (it))) {
+                delete = true
+            }
+        }
+
+        if (delete) {
+            project.delete(file)
+            reportResult(project, file, log)
+        }
+    }
+
+    private static def isTargetFont(file, fontName) {
+        fontName = fontName == 'Roboto' ? 'Roboto-' : fontName
+        return file.name.startsWith(fontName);
+    }
+
+    private static void reportResult(project, file, log) {
         if (file.exists()) {
             project.logger.error("Error: Failed to delete font $file.name")
         } else if (log) {
