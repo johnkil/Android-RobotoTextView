@@ -85,7 +85,17 @@ class RobotoTextViewPlugin implements Plugin<Project> {
 
     private static def isTargetFont(file, fontName) {
         fontName = fontName == 'Roboto' ? 'Roboto-' : fontName
-        return file.name.startsWith(fontName);
+        // General font name check.
+        if(!file.name.startsWith(fontName)) {
+            return false
+        }
+
+        // Stop checking if it Roboto family.
+        if(fontName == 'Roboto-') {
+            return true
+        }
+        // Extra check for Italic fonts (because RobotoMono-Bold != RobotoMono-BoldItalic)
+        return !file.name.substring(fontName.length()).startsWith("Italic")
     }
 
     private static void reportResult(project, file, log) {
