@@ -157,7 +157,7 @@ class RobotoTextViewPluginIntegrationTest {
         assertFontNotRemoved(result, "RobotoSlab-Regular.ttf")
         assertFontNotRemoved(result, "RobotoSlab-Thin.ttf")
 
-        Assert.assertEquals(result.task(":assemble").getOutcome(), TaskOutcome.SUCCESS)
+        Assert.assertEquals(result.task(":assemble").outcome, TaskOutcome.SUCCESS)
     }
 
     @Test
@@ -209,7 +209,7 @@ class RobotoTextViewPluginIntegrationTest {
         assertFontNotRemoved(result, "RobotoCondensed-LightItalic.ttf")
         assertFontNotRemoved(result, "RobotoCondensed-Regular.ttf")
 
-        Assert.assertEquals(result.task(":assemble").getOutcome(), TaskOutcome.SUCCESS)
+        Assert.assertEquals(result.task(":assemble").outcome, TaskOutcome.SUCCESS)
     }
 
     @Test
@@ -261,7 +261,7 @@ class RobotoTextViewPluginIntegrationTest {
 
         assertFontNotRemoved(result, "Roboto-Regular.ttf")
 
-        Assert.assertEquals(result.task(":assemble").getOutcome(), TaskOutcome.SUCCESS)
+        Assert.assertEquals(result.task(":assemble").outcome, TaskOutcome.SUCCESS)
     }
 
     @Test
@@ -313,14 +313,16 @@ class RobotoTextViewPluginIntegrationTest {
         assertFontNotRemoved(result, "RobotoMono-Thin.ttf")
         assertFontNotRemoved(result, "RobotoMono-ThinItalic.ttf")
 
-        Assert.assertEquals(result.task(":assemble").getOutcome(), TaskOutcome.SUCCESS)
+        Assert.assertEquals(result.task(":assemble").outcome, TaskOutcome.SUCCESS)
     }
 
     static void assertFontRemoved(BuildResult result, String fontName) {
-        Assert.assertTrue("assertFontRemoved: $fontName", result.getOutput().contains("Note: Font $fontName was deleted"));
+        Assert.assertTrue("assertFontRemoved: $fontName with output:\n$result.output",
+                result.output.contains("Note: Font $fontName was deleted"));
     }
 
     static void assertFontNotRemoved(BuildResult result, String fontName) {
-        Assert.assertFalse("assertFontNotRemoved: $fontName", result.getOutput().contains("Note: Font $fontName was deleted"));
+        Assert.assertFalse("assertFontNotRemoved: $fontName with output:\n$result.output",
+                result.output.contains("Note: Font $fontName was deleted"));
     }
 }
