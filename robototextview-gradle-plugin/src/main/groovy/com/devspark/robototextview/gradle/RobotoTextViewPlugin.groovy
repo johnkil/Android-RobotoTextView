@@ -7,43 +7,45 @@ class RobotoTextViewPlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
-        def applicationPluginApplied = project.pluginManager.findPlugin('com.android.application') != null;
-        def libraryPluginApplied = project.pluginManager.findPlugin('com.android.library') != null;
-
-        def variants
-        if(applicationPluginApplied) {
-            variants = project.android.applicationVariants
-        } else if(libraryPluginApplied) {
-            variants = project.android.libraryVariants
-        } else {
-            project.logger.error('Error: plugins "com.android.application" or "com.android.library" ' +
-                    'required for "com.devspark.robototextview.gradle-plugin"')
-            return
-        }
-
         project.extensions.create("robototextview", RobotoTextViewPluginExtension)
 
-        variants.all { variant ->
-            variant.mergeAssets.doLast {
-                def fonts = project.file("$variant.mergeAssets.outputDir/fonts")
-                if (!fonts.exists()) {
-                    project.logger.warn("Warning: " + fonts.absolutePath + " isn't exists")
-                    return
-                }
+        project.afterEvaluate {
+            def applicationPluginApplied = project.pluginManager.findPlugin('com.android.application') != null;
+            def libraryPluginApplied = project.pluginManager.findPlugin('com.android.library') != null;
 
-                def log = project.robototextview.log
+            def variants
+            if (applicationPluginApplied) {
+                variants = project.android.applicationVariants
+            } else if (libraryPluginApplied) {
+                variants = project.android.libraryVariants
+            } else {
+                project.logger.error('Error: plugins "com.android.application" or "com.android.library" ' +
+                        'required for "com.devspark.robototextview.gradle-plugin"')
+                return
+            }
 
-                def included = project.robototextview.include
-                if (included != null) {
-                    fonts.eachFile { file ->
-                        included.each { delete(project, file, !file.name.startsWith((it)), log) }
+            variants.all { variant ->
+                variant.mergeAssets.doLast {
+                    def fonts = project.file("$variant.mergeAssets.outputDir/fonts")
+                    if (!fonts.exists()) {
+                        project.logger.warn("Warning: " + fonts.absolutePath + " isn't exists")
+                        return
                     }
-                }
 
-                def excluded = project.robototextview.exclude
-                if (excluded != null) {
-                    fonts.eachFile { file ->
-                        excluded.each { delete(project, file, file.name.startsWith((it)), log) }
+                    def log = project.robototextview.log
+
+                    def included = project.robototextview.include
+                    if (included != null) {
+                        fonts.eachFile { file ->
+                            included.each { delete(project, file, !file.name.startsWith((it)), log) }
+                        }
+                    }
+
+                    def excluded = project.robototextview.exclude
+                    if (excluded != null) {
+                        fonts.eachFile { file ->
+                            excluded.each { delete(project, file, file.name.startsWith((it)), log) }
+                        }
                     }
                 }
             }
