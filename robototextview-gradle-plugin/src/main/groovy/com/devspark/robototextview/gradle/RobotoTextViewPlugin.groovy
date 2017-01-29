@@ -2,8 +2,13 @@ package com.devspark.robototextview.gradle
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.internal.impldep.com.google.common.annotations.VisibleForTesting
 
 class RobotoTextViewPlugin implements Plugin<Project> {
+
+    @VisibleForTesting
+    static final def WARNING_TOGETHER = 'Warning: Using "robototextview.include" and "robototextview.exclude" together isn\'t supported. ' +
+            '"robototextview.include" will be used for this build'
 
     @Override
     void apply(Project project) {
@@ -35,12 +40,14 @@ class RobotoTextViewPlugin implements Plugin<Project> {
                     def log = project.robototextview.log
 
                     def included = project.robototextview.include
-                    if (included != null) {
-                        fonts.eachFile { processIncluded(project, (it), included, log) }
+                    def excluded = project.robototextview.exclude
+                    if (included != null && excluded != null) {
+                        project.logger.warn(WARNING_TOGETHER)
                     }
 
-                    def excluded = project.robototextview.exclude
-                    if (excluded != null) {
+                    if (included != null) {
+                        fonts.eachFile { processIncluded(project, (it), included, log) }
+                    } else if (excluded != null) {
                         fonts.eachFile { processExcluded(project, (it), excluded, log) }
                     }
                 }

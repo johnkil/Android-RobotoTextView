@@ -316,6 +316,62 @@ class RobotoTextViewPluginIntegrationTest {
         Assert.assertEquals(result.task(":assemble").outcome, TaskOutcome.SUCCESS)
     }
 
+    @Test
+    void testIncludeExclude() {
+        buildFile << """
+            robototextview {
+                include 'Roboto'
+                exclude 'RobotoMono'
+                log true
+            }
+        """
+
+        def result = GradleRunner.create()
+                .withProjectDir(testProjectDir.root)
+                .withArguments('assemble')
+                .withPluginClasspath()
+                .build()
+
+        assertFontRemoved(result, "RobotoCondensed-Bold.ttf")
+        assertFontRemoved(result, "RobotoCondensed-BoldItalic.ttf")
+        assertFontRemoved(result, "RobotoCondensed-Italic.ttf")
+        assertFontRemoved(result, "RobotoCondensed-Light.ttf")
+        assertFontRemoved(result, "RobotoCondensed-LightItalic.ttf")
+        assertFontRemoved(result, "RobotoCondensed-Regular.ttf")
+        assertFontRemoved(result, "RobotoMono-Bold.ttf")
+        assertFontRemoved(result, "RobotoMono-BoldItalic.ttf")
+        assertFontRemoved(result, "RobotoMono-Italic.ttf")
+        assertFontRemoved(result, "RobotoMono-Light.ttf")
+        assertFontRemoved(result, "RobotoMono-LightItalic.ttf")
+        assertFontRemoved(result, "RobotoMono-Medium.ttf")
+        assertFontRemoved(result, "RobotoMono-MediumItalic.ttf")
+        assertFontRemoved(result, "RobotoMono-Regular.ttf")
+        assertFontRemoved(result, "RobotoMono-Thin.ttf")
+        assertFontRemoved(result, "RobotoMono-ThinItalic.ttf")
+        assertFontRemoved(result, "RobotoSlab-Bold.ttf")
+        assertFontRemoved(result, "RobotoSlab-Light.ttf")
+        assertFontRemoved(result, "RobotoSlab-Regular.ttf")
+        assertFontRemoved(result, "RobotoSlab-Thin.ttf")
+
+
+        assertFontNotRemoved(result, "Roboto-Black.ttf")
+        assertFontNotRemoved(result, "Roboto-BlackItalic.ttf")
+        assertFontNotRemoved(result, "Roboto-Bold.ttf")
+        assertFontNotRemoved(result, "Roboto-BoldItalic.ttf")
+        assertFontNotRemoved(result, "Roboto-Italic.ttf")
+        assertFontNotRemoved(result, "Roboto-Light.ttf")
+        assertFontNotRemoved(result, "Roboto-LightItalic.ttf")
+        assertFontNotRemoved(result, "Roboto-Medium.ttf")
+        assertFontNotRemoved(result, "Roboto-MediumItalic.ttf")
+        assertFontNotRemoved(result, "Roboto-Regular.ttf")
+        assertFontNotRemoved(result, "Roboto-Thin.ttf")
+        assertFontNotRemoved(result, "Roboto-ThinItalic.ttf")
+
+        Assert.assertTrue(result.output.contains(RobotoTextViewPlugin.WARNING_TOGETHER));
+
+        Assert.assertEquals(result.task(":assemble").outcome, TaskOutcome.SUCCESS)
+    }
+
     static void assertFontRemoved(BuildResult result, String fontName) {
         Assert.assertTrue("assertFontRemoved: $fontName with output:\n$result.output",
                 result.output.contains("Note: Font $fontName was deleted"));
