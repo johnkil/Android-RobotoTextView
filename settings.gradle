@@ -1,2 +1,3 @@
 include ':robototextview'
+include ':robototextview-gradle-plugin'
 include ':robototextview-sample'
