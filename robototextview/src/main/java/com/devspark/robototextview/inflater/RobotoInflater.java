@@ -5,6 +5,7 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.view.LayoutInflaterFactory;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatCallback;
 import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.view.ActionMode;
@@ -23,11 +24,16 @@ public class RobotoInflater implements LayoutInflaterFactory {
     }
 
     public static void attach(Activity activity) {
-        final Window window = activity.getWindow();
-        final Window.Callback callback = window.getCallback();
-        LayoutInflaterCompat.setFactory(activity.getLayoutInflater(),
-                new RobotoInflater(AppCompatDelegate.create(activity, StubAppCompatCallback.INSTANCE)));
-        window.setCallback(callback);
+        if (activity instanceof AppCompatActivity) {
+            LayoutInflaterCompat.setFactory(activity.getLayoutInflater(),
+                    new RobotoInflater(((AppCompatActivity) activity).getDelegate()));
+        } else {
+            final Window window = activity.getWindow();
+            final Window.Callback callback = window.getCallback();
+            LayoutInflaterCompat.setFactory(activity.getLayoutInflater(),
+                    new RobotoInflater(AppCompatDelegate.create(activity, StubAppCompatCallback.INSTANCE)));
+            window.setCallback(callback);
+        }
     }
 
     @Override
