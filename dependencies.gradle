@@ -1,0 +1,22 @@
+ext.versions = [
+        minSdk              : 9,
+        targetSdk           : 25,
+        compileSdk          : 25,
+        buildTools          : '25.0.2',
+
+        androidGradlePlugin : '2.3.0-beta3',
+        versionsGradlePlugin: '0.14.0',
+
+        junit               : '4.12',
+        supportLib          : '25.1.1'
+]
+
+ext.gradlePlugins = [
+        android : "com.android.tools.build:gradle:$versions.androidGradlePlugin",
+        versions: "com.github.ben-manes:gradle-versions-plugin:$versions.versionsGradlePlugin"
+]
+
+ext.libraries = [
+        junit           : "junit:junit:$versions.junit",
+        supportAppCompat: "com.android.support:appcompat-v7:$versions.supportLib"
+]

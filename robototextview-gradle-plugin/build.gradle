@@ -12,6 +12,6 @@ dependencies {
     compile localGroovy()
 
     testCompile gradleTestKit()
-    testCompile 'junit:junit:4.12'
-    testCompile 'com.android.tools.build:gradle:2.2.0'
+    testCompile libraries.junit
+    testCompile gradlePlugins.android
 }

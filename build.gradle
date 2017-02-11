@@ -1,10 +1,14 @@
+apply from: 'dependencies.gradle'
+
 buildscript {
+    apply from: 'dependencies.gradle'
+
     repositories {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.13.0'
+        classpath gradlePlugins.android
+        classpath gradlePlugins.versions
     }
 }
 
@@ -14,11 +18,4 @@ allprojects {
     }
 }
 
-ext {
-    minSdkVersion = 9
-    compileSdkVersion = 24
-    buildToolsVersion = '24.0.2'
-
-    // Android dependencies.
-    supportAppCompat = 'com.android.support:appcompat-v7:24.2.0'
-}
+apply plugin: 'com.github.ben-manes.versions'
