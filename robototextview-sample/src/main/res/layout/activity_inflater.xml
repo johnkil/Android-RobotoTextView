@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <com.devspark.robototextview.sample.CustomTextView
                 style="@style/AppTheme.ROBOTO_THIN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
