@@ -47,17 +47,22 @@ public class RobotoInflater implements LayoutInflaterFactory {
 
     @Override
     public View onCreateView(View parent, String name, Context context, AttributeSet attrs) {
-        View view = mAppCompatDelegate.createView(parent, name, context, attrs);
-        if (view == null) {
-            final boolean isPre21 = Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP;
-            final boolean inheritContext = isPre21 && shouldInheritContext((ViewParent) parent);
-            view = mCompatInflater.createView(parent, name, context, attrs, inheritContext, isPre21, VectorEnabledTintResources.shouldBeUsed());
-        }
+        try {
+            View view = mAppCompatDelegate.createView(parent, name, context, attrs);
+            if (view == null) {
+                final boolean isPre21 = Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP;
+                final boolean inheritContext = isPre21 && shouldInheritContext((ViewParent) parent);
+                view = mCompatInflater.createView(parent, name, context, attrs, inheritContext, isPre21, VectorEnabledTintResources.shouldBeUsed());
+            }
 
-        if (view instanceof TextView) {
-            RobotoTypefaceUtils.initView((TextView) view, context, attrs);
+            if (view instanceof TextView) {
+                RobotoTypefaceUtils.initView((TextView) view, context, attrs);
+            }
+            return view;
+        } catch (Exception e) {
+            //if some thing went wrong
+            return null;
         }
-        return view;
     }
 
 
