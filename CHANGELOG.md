@@ -2,6 +2,19 @@ Change Log
 ==========
 
 
+## Version 2.6.0
+
+_In Progress_
+
+ * Updated roboto fonts [v2.136](https://github.com/google/roboto/releases/tag/v2.136).
+ * Implemented `RobotoInflater` to apply roboto typeface for original TextView (like a [Calligraphy](https://github.com/chrisjenx/Calligraphy)).
+ * Implemented gradle plugin for managing the roboto fonts.
+ * Refactoring of implementation: 
+   - Removed deprecated class `RobotoDigitalClock`.
+   - Joined of `RobotoTypefaceManager` and `RobotoTypefaceUtils` into `RobotoTypefaces`.
+ * Support AppCompat v25.1.1.
+
+
 ## Version 2.5.1
 
 _2016-08-26_

@@ -119,7 +119,7 @@ Spannable spannable = new SpannableString("text");
 spannable.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 ```
 
-#### RobotoInflater
+#### Roboto Inflater
 
 To apply roboto typeface for original TextView (like a [Calligraphy][7]) you must attach inflater in your `Activity` class in the `#onCreate()` method.
 ```java
