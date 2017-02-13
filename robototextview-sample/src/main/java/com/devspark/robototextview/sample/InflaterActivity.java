@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.devspark.robototextview.inflater.RobotoInflater;
 
 
-public final class InflaterActivity extends AppCompatActivity {
+public class InflaterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

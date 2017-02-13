@@ -21,7 +21,7 @@ import android.support.v7.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
 import android.widget.CheckBox;
 
-import com.devspark.robototextview.util.RobotoTypefaceUtils;
+import com.devspark.robototextview.RobotoTypefaces;
 
 /**
  * Implementation of a {@link CheckBox} with native support for all the Roboto fonts.
@@ -60,7 +60,7 @@ public class RobotoCheckBox extends AppCompatCheckBox {
         super(context, attrs);
 
         if (!isInEditMode()) {
-            RobotoTypefaceUtils.initView(this, context, attrs);
+            RobotoTypefaces.setUpTypeface(this, context, attrs);
         }
     }
 
@@ -82,8 +82,7 @@ public class RobotoCheckBox extends AppCompatCheckBox {
         super(context, attrs, defStyle);
 
         if (!isInEditMode()) {
-            RobotoTypefaceUtils.initView(this, context, attrs);
+            RobotoTypefaces.setUpTypeface(this, context, attrs);
         }
     }
-
 }

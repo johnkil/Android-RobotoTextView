@@ -20,7 +20,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ToggleButton;
 
-import com.devspark.robototextview.util.RobotoTypefaceUtils;
+import com.devspark.robototextview.RobotoTypefaces;
 
 /**
  * Implementation of a {@link ToggleButton} with native support for all the Roboto fonts.
@@ -59,7 +59,7 @@ public class RobotoToggleButton extends ToggleButton {
         super(context, attrs);
 
         if (!isInEditMode()) {
-            RobotoTypefaceUtils.initView(this, context, attrs);
+            RobotoTypefaces.setUpTypeface(this, context, attrs);
         }
     }
 
@@ -81,8 +81,7 @@ public class RobotoToggleButton extends ToggleButton {
         super(context, attrs, defStyle);
 
         if (!isInEditMode()) {
-            RobotoTypefaceUtils.initView(this, context, attrs);
+            RobotoTypefaces.setUpTypeface(this, context, attrs);
         }
     }
-
 }

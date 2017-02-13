@@ -3,6 +3,7 @@ package com.devspark.robototextview.inflater;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.view.LayoutInflaterFactory;
@@ -18,21 +19,20 @@ import android.view.ViewParent;
 import android.view.Window;
 import android.widget.TextView;
 
-import com.devspark.robototextview.util.RobotoTypefaceUtils;
+import com.devspark.robototextview.RobotoTypefaces;
 
+@SuppressWarnings("RestrictedApi")
 public class RobotoInflater implements LayoutInflaterFactory {
-    private AppCompatDelegate mAppCompatDelegate;
+    private final RobotoCompatInflater mCompatInflater = new RobotoCompatInflater();
+    private final AppCompatDelegate mAppCompatDelegate;
+    private final Window mWindow;
 
-    private RobotoCompatInflater mCompatInflater = new RobotoCompatInflater();
-
-    private Window mWindow;
-
-    private RobotoInflater(AppCompatDelegate delegate, Window window) {
+    private RobotoInflater(@NonNull AppCompatDelegate delegate, @NonNull Window window) {
         mAppCompatDelegate = delegate;
         mWindow = window;
     }
 
-    public static void attach(Activity activity) {
+    public static void attach(@NonNull Activity activity) {
         if (activity instanceof AppCompatActivity) {
             LayoutInflaterCompat.setFactory(activity.getLayoutInflater(),
                     new RobotoInflater(((AppCompatActivity) activity).getDelegate(), activity.getWindow()));
@@ -56,7 +56,7 @@ public class RobotoInflater implements LayoutInflaterFactory {
             }
 
             if (view instanceof TextView) {
-                RobotoTypefaceUtils.initView((TextView) view, context, attrs);
+                RobotoTypefaces.setUpTypeface((TextView) view, context, attrs);
             }
             return view;
         } catch (Exception e) {
@@ -94,17 +94,16 @@ public class RobotoInflater implements LayoutInflaterFactory {
     private static class StubAppCompatCallback implements AppCompatCallback {
         static final StubAppCompatCallback INSTANCE = new StubAppCompatCallback();
 
-        private StubAppCompatCallback() {
-        }
+        private StubAppCompatCallback() {}
 
         @Override
         public void onSupportActionModeStarted(ActionMode mode) {
-
+            // do nothing
         }
 
         @Override
         public void onSupportActionModeFinished(ActionMode mode) {
-
+            // do nothing
         }
 
         @Nullable

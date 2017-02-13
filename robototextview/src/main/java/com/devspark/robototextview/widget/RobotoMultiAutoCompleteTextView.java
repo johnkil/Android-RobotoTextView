@@ -21,7 +21,7 @@ import android.support.v7.widget.AppCompatMultiAutoCompleteTextView;
 import android.util.AttributeSet;
 import android.widget.MultiAutoCompleteTextView;
 
-import com.devspark.robototextview.util.RobotoTypefaceUtils;
+import com.devspark.robototextview.RobotoTypefaces;
 
 /**
  * Implementation of a {@link MultiAutoCompleteTextView} with native support for all the Roboto fonts.
@@ -60,7 +60,7 @@ public class RobotoMultiAutoCompleteTextView extends AppCompatMultiAutoCompleteT
         super(context, attrs);
 
         if (!isInEditMode()) {
-            RobotoTypefaceUtils.initView(this, context, attrs);
+            RobotoTypefaces.setUpTypeface(this, context, attrs);
         }
     }
 
@@ -82,8 +82,7 @@ public class RobotoMultiAutoCompleteTextView extends AppCompatMultiAutoCompleteT
         super(context, attrs, defStyle);
 
         if (!isInEditMode()) {
-            RobotoTypefaceUtils.initView(this, context, attrs);
+            RobotoTypefaces.setUpTypeface(this, context, attrs);
         }
     }
-
 }

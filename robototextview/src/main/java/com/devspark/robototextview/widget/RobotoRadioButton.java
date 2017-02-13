@@ -21,7 +21,7 @@ import android.support.v7.widget.AppCompatRadioButton;
 import android.util.AttributeSet;
 import android.widget.RadioButton;
 
-import com.devspark.robototextview.util.RobotoTypefaceUtils;
+import com.devspark.robototextview.RobotoTypefaces;
 
 /**
  * Implementation of a {@link RadioButton} with native support for all the Roboto fonts.
@@ -60,7 +60,7 @@ public class RobotoRadioButton extends AppCompatRadioButton {
         super(context, attrs);
 
         if (!isInEditMode()) {
-            RobotoTypefaceUtils.initView(this, context, attrs);
+            RobotoTypefaces.setUpTypeface(this, context, attrs);
         }
     }
 
@@ -82,8 +82,7 @@ public class RobotoRadioButton extends AppCompatRadioButton {
         super(context, attrs, defStyle);
 
         if (!isInEditMode()) {
-            RobotoTypefaceUtils.initView(this, context, attrs);
+            RobotoTypefaces.setUpTypeface(this, context, attrs);
         }
     }
-
 }

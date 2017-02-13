@@ -14,20 +14,23 @@ import android.util.Log;
 import android.util.SparseIntArray;
 
 import com.devspark.robototextview.R;
-import com.devspark.robototextview.util.RobotoTypefaceManager;
-import com.devspark.robototextview.util.RobotoTypefaceUtils;
+import com.devspark.robototextview.RobotoTypefaces;
+import com.devspark.robototextview.RobotoTypefaces.RobotoTypeface;
 
 /**
  * Sets the text color, size and typeface to match a TextAppearance resource.
  */
 public class RobotoTextAppearanceSpan extends MetricAffectingSpan {
     private static final int[] TEXT_ATTRS = new int[]{
-            android.R.attr.textSize, android.R.attr.textColor, android.R.attr.textColorLink};
+            android.R.attr.textSize,
+            android.R.attr.textColor,
+            android.R.attr.textColorLink
+    };
 
-    private final Typeface mTypeface;
-    private final int mTextSize;
-    private final ColorStateList mTextColor;
-    private final ColorStateList mTextColorLink;
+    private final Typeface typeface;
+    private final int textSize;
+    private final ColorStateList textColor;
+    private final ColorStateList textColorLink;
 
     /**
      * Uses the specified TextAppearance resource to determine the
@@ -48,7 +51,7 @@ public class RobotoTextAppearanceSpan extends MetricAffectingSpan {
      */
     public RobotoTextAppearanceSpan(Context context, int appearance, int colorList) {
         TypedArray a = context.obtainStyledAttributes(appearance, R.styleable.RobotoTextView);
-        mTypeface = RobotoTypefaceUtils.typefaceFromAttrs(context, a);
+        typeface = RobotoTypefaces.obtainTypeface(context, a);
         a.recycle();
 
         ColorStateList textColor;
@@ -57,8 +60,8 @@ public class RobotoTextAppearanceSpan extends MetricAffectingSpan {
         SparseIntArray attrsIndexes = textAttrsIndexes();
 
         textColor = a.getColorStateList(attrsIndexes.get(android.R.attr.textColor));
-        mTextColorLink = a.getColorStateList(attrsIndexes.get(android.R.attr.textColorLink));
-        mTextSize = a.getDimensionPixelSize(attrsIndexes.get(android.R.attr.textSize), -1);
+        this.textColorLink = a.getColorStateList(attrsIndexes.get(android.R.attr.textColorLink));
+        this.textSize = a.getDimensionPixelSize(attrsIndexes.get(android.R.attr.textSize), -1);
 
         a.recycle();
 
@@ -68,18 +71,18 @@ public class RobotoTextAppearanceSpan extends MetricAffectingSpan {
             a.recycle();
         }
 
-        mTextColor = textColor;
+        this.textColor = textColor;
     }
 
     /**
      * Makes text be drawn with the specified typeface, size and colors.
      */
-    public RobotoTextAppearanceSpan(Context context, int typefaceId, int size,
-                                    ColorStateList color, ColorStateList linkColor) {
-        mTypeface = RobotoTypefaceManager.obtainTypeface(context, typefaceId);
-        mTextSize = size;
-        mTextColor = color;
-        mTextColorLink = linkColor;
+    public RobotoTextAppearanceSpan(Context context, @RobotoTypeface int typeface,
+            int size, @Nullable ColorStateList color, @Nullable ColorStateList linkColor) {
+        this.typeface = RobotoTypefaces.obtainTypeface(context, typeface);
+        this.textSize = size;
+        this.textColor = color;
+        this.textColorLink = linkColor;
     }
 
     private int themeResId(Context context) {
@@ -107,7 +110,7 @@ public class RobotoTextAppearanceSpan extends MetricAffectingSpan {
      */
     @NonNull
     public Typeface getTypeface() {
-        return mTypeface;
+        return typeface;
     }
 
     /**
@@ -115,7 +118,7 @@ public class RobotoTextAppearanceSpan extends MetricAffectingSpan {
      * if it does not specify one.
      */
     public int getTextSize() {
-        return mTextSize;
+        return textSize;
     }
 
     /**
@@ -124,7 +127,7 @@ public class RobotoTextAppearanceSpan extends MetricAffectingSpan {
      */
     @Nullable
     public ColorStateList getTextColor() {
-        return mTextColor;
+        return textColor;
     }
 
     /**
@@ -133,25 +136,25 @@ public class RobotoTextAppearanceSpan extends MetricAffectingSpan {
      */
     @Nullable
     public ColorStateList getLinkTextColor() {
-        return mTextColorLink;
+        return textColorLink;
     }
 
     @Override
     public void updateDrawState(TextPaint tp) {
         updateMeasureState(tp);
-        if (mTextColor != null) {
-            tp.setColor(mTextColor.getColorForState(tp.drawableState, 0));
+        if (textColor != null) {
+            tp.setColor(textColor.getColorForState(tp.drawableState, 0));
         }
-        if (mTextColorLink != null) {
-            tp.linkColor = mTextColorLink.getColorForState(tp.drawableState, 0);
+        if (textColorLink != null) {
+            tp.linkColor = textColorLink.getColorForState(tp.drawableState, 0);
         }
     }
 
     @Override
     public void updateMeasureState(TextPaint tp) {
-        RobotoTypefaceUtils.setUp(tp, mTypeface);
-        if (mTextSize > 0) {
-            tp.setTextSize(mTextSize);
+        RobotoTypefaces.setUpTypeface(tp, typeface);
+        if (textSize > 0) {
+            tp.setTextSize(textSize);
         }
     }
 }
