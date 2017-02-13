@@ -56,23 +56,23 @@ To set up a typeface you must specify the parameter `typeface`:
 
 ``` xml
 <com.devspark.robototextview.widget.RobotoTextView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:typeface="roboto_light_italic"/>
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:typeface="roboto_light_italic"/>
 ```
 
 or specify a set of parameters `fontFamily`, `textWeight` and `textStyle`:
 ``` xml
 <com.devspark.robototextview.widget.RobotoTextView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fontFamily="roboto"
-            app:textWeight="light"
-            app:textStyle="italic"/>
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:fontFamily="roboto"
+    app:textWeight="light"
+    app:textStyle="italic"/>
 ```
 
 Set up typeface in code:
@@ -133,11 +133,12 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 and specify the typeface in xml:
 ``` xml
 <TextView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:typeface="roboto_light_italic"/>
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:typeface="roboto_light_italic"
+    tools:ignore="MissingPrefix"/>
 ```
 
 _Note: Popular IDE's (Android Studio, IntelliJ) will likely mark this as an error despite being correct. You may want to add `tools:ignore="MissingPrefix"` to either the View itself or its parent ViewGroup to avoid this. You'll need to add the tools namespace to have access to this "ignore" attribute. `xmlns:tools="
