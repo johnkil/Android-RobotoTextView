@@ -30,7 +30,7 @@
         android:padding="16dp">
 
         <com.devspark.robototextview.widget.RobotoButton
-            android:id="@+id/btnGoToInflater"
+            android:id="@+id/btn_go_to_inflater"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"

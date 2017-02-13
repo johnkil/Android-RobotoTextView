@@ -517,6 +517,29 @@ public final class RobotoTypefaces {
     }
 
     /**
+     * Set up typeface for TextView.
+     *
+     * @param textView The text view
+     * @param typeface The value of "typeface" attribute
+     */
+    public static void setUpTypeface(@NonNull TextView textView, @RobotoTypeface int typeface) {
+        setUpTypeface(textView, obtainTypeface(textView.getContext(), typeface));
+    }
+
+    /**
+     * Set up typeface for TextView.
+     *
+     * @param textView The text view
+     * @param fontFamily The value of "fontFamily" attribute
+     * @param textWeight The value of "textWeight" attribute
+     * @param textStyle  The value of "textStyle" attribute
+     */
+    public static void setUpTypeface(@NonNull TextView textView, @RobotoFontFamily int fontFamily,
+            @RobotoTextWeight int textWeight, @RobotoTextStyle int textStyle) {
+        setUpTypeface(textView, obtainTypeface(textView.getContext(), fontFamily, textWeight, textStyle));
+    }
+
+    /**
      * Set up typeface for TextView. Wrapper over {@link TextView#setTypeface(Typeface)}
      * for making the font anti-aliased.
      *

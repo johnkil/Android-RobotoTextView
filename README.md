@@ -32,7 +32,7 @@ Download
 Gradle:
 
 ```groovy
-compile 'com.github.johnkil.android-robototextview:robototextview:2.5.1'
+compile 'com.github.johnkil.android-robototextview:robototextview:2.6.0'
 ```
 
 Maven:
@@ -41,7 +41,7 @@ Maven:
 <dependency>
     <groupId>com.github.johnkil.android-robototextview</groupId>
     <artifactId>robototextview</artifactId>
-    <version>2.5.1</version>
+    <version>2.6.0</version>
     <type>aar</type>
 </dependency>
 ```
@@ -82,21 +82,19 @@ Set up typeface in code:
 Using parameter `typeface`:
 ``` java
 RobotoTextView textView = new RobotoTextView(context);
-Typeface typeface = RobotoTypefaceManager.obtainTypeface(
-        context, 
-        RobotoTypefaceManager.Typeface.ROBOTO_LIGHT_ITALIC);
-RobotoTypefaceUtils.setUp(textView, typeface);
+RobotoTypefaces.setUpTypeface(
+        textView, 
+        RobotoTypefaces.TYPEFACE_ROBOTO_LIGHT_ITALIC);
 ```
 
 Using parameters `fontFamily`, `textWeight` and `textStyle`:
 ``` java
 RobotoTextView textView = new RobotoTextView(context);
-Typeface typeface = RobotoTypefaceManager.obtainTypeface(
-        context, 
-        RobotoTypefaceManager.FontFamily.ROBOTO,
-        RobotoTypefaceManager.TextWeight.LIGHT,
-        RobotoTypefaceManager.TextStyle.ITALIC);
-RobotoTypefaceUtils.setUp(textView, typeface);
+RobotoTypefaces.setUpTypeface(
+        textView, 
+        RobotoTypefaces.FONT_FAMILY_ROBOTO,
+        RobotoTypefaces.TEXT_WEIGHT_LIGHT,
+        RobotoTypefaces.TEXT_STYLE_ITALIC);
 ```
 
 #### With Span
@@ -104,8 +102,8 @@ RobotoTypefaceUtils.setUp(textView, typeface);
 Using parameter `typeface`:
 ``` java
 RobotoTypefaceSpan span = new RobotoTypefaceSpan(
-        context,
-        RobotoTypefaceManager.Typeface.ROBOTO_BOLD);
+        context, 
+        RobotoTypefaces.TYPEFACE_ROBOTO_LIGHT_ITALIC);
 Spannable spannable = new SpannableString("text");
 spannable.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 ```
@@ -114,12 +112,37 @@ Using parameters `fontFamily`, `textWeight` and `textStyle`:
 ``` java
 RobotoTypefaceSpan span = new RobotoTypefaceSpan(
         context,
-        RobotoTypefaceManager.FontFamily.ROBOTO,
-        RobotoTypefaceManager.TextWeight.LIGHT,
-        RobotoTypefaceManager.TextStyle.ITALIC);
+        RobotoTypefaces.FONT_FAMILY_ROBOTO,
+        RobotoTypefaces.TEXT_WEIGHT_LIGHT,
+        RobotoTypefaces.TEXT_STYLE_ITALIC);
 Spannable spannable = new SpannableString("text");
 spannable.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 ```
+
+#### RobotoInflater
+
+To apply roboto typeface for original TextView (like a [Calligraphy][7]) you must attach inflater in your `Activity` class in the `#onCreate()` method.
+```java
+@Override
+protected void onCreate(@Nullable Bundle savedInstanceState) {
+    RobotoInflater.attach(this);
+    super.onCreate(savedInstanceState);
+}
+```
+
+and specify the typeface in xml:
+``` xml
+<TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:typeface="roboto_light_italic"/>
+```
+
+_Note: Popular IDE's (Android Studio, IntelliJ) will likely mark this as an error despite being correct. You may want to add `tools:ignore="MissingPrefix"` to either the View itself or its parent ViewGroup to avoid this. You'll need to add the tools namespace to have access to this "ignore" attribute. `xmlns:tools="
+http://schemas.android.com/tools"`. See https://code.google.com/p/android/issues/detail?id=65176._
+
 
 Gradle
 ------
@@ -167,5 +190,6 @@ License
 [4]: https://www.google.com/fonts/specimen/Roboto+Mono
 [5]: http://www.google.com/design/spec/style/typography.html
 [6]: http://developer.android.com/reference/android/widget/TextView.html
+[7]: https://github.com/chrisjenx/Calligraphy
 
 [0]: https://github.com/google/roboto
