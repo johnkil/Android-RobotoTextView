@@ -13,5 +13,4 @@ android {
     }
 }
 
-// Used to push in maven
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

@@ -15,3 +15,5 @@ dependencies {
     testCompile libraries.junit
     testCompile gradlePlugins.android
 }
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
