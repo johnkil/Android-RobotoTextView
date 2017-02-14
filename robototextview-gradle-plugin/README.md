@@ -46,7 +46,7 @@ robototextview {
 }
 ```
 
-_Note: Don't use `include` and `exclude` together._
+_Note: Don't use `include` and `exclude` together. In this case `exclude` ignored._
 
 
 License
