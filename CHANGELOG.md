@@ -2,9 +2,9 @@ Change Log
 ==========
 
 
-## Version 2.6.0
+## Version 3.0.0
 
-_In Progress_
+_2017-02-14_
 
  * Updated roboto fonts [v2.136](https://github.com/google/roboto/releases/tag/v2.136).
  * Implemented `RobotoInflater` to apply roboto typeface for original TextView (like a [Calligraphy](https://github.com/chrisjenx/Calligraphy)).
