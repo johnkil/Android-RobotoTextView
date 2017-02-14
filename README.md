@@ -32,7 +32,7 @@ Download
 Gradle:
 
 ```groovy
-compile 'com.github.johnkil.android-robototextview:robototextview:2.6.0'
+compile 'com.github.johnkil.android-robototextview:robototextview:3.0.0'
 ```
 
 Maven:
@@ -41,7 +41,7 @@ Maven:
 <dependency>
     <groupId>com.github.johnkil.android-robototextview</groupId>
     <artifactId>robototextview</artifactId>
-    <version>2.6.0</version>
+    <version>3.0.0</version>
     <type>aar</type>
 </dependency>
 ```
