@@ -27,8 +27,8 @@ apply plugin: 'com.devspark.robototextview.gradle-plugin'
 ```
 
 
-Configuration
--------------
+Usage
+-----
 
 To specify the fonts that you want to exclude:
 

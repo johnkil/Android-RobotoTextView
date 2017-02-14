@@ -150,7 +150,7 @@ Gradle
 
 If you intend to use is not all fonts, the extra fonts can be removed.
 
-``` gradle
+```groovy
 android.applicationVariants.all{ variant ->
     variant.mergeAssets.doLast {
         File fonts = file("$variant.mergeAssets.outputDir/fonts")
