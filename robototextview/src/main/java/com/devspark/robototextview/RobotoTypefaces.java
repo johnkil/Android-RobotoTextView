@@ -162,8 +162,8 @@ public final class RobotoTypefaces {
      * Obtain typeface.
      *
      * @param context       The Context the widget is running in, through which it can access the current theme, resources, etc.
-     * @param typefaceValue The value of "typeface" attribute
-     * @return specify {@link Typeface} or throws IllegalArgumentException if unknown `typeface` attribute value.
+     * @param typefaceValue The value of "robotoTypeface" attribute
+     * @return specify {@link Typeface} or throws IllegalArgumentException if unknown `robotoTypeface` attribute value.
      */
     @NonNull
     public static Typeface obtainTypeface(@NonNull Context context, @RobotoTypeface int typefaceValue) {
@@ -179,9 +179,9 @@ public final class RobotoTypefaces {
      * Obtain typeface.
      *
      * @param context    The Context the widget is running in, through which it can access the current theme, resources, etc.
-     * @param fontFamily The value of "fontFamily" attribute
-     * @param textWeight The value of "textWeight" attribute
-     * @param textStyle  The value of "textStyle" attribute
+     * @param fontFamily The value of "robotoFontFamily" attribute
+     * @param textWeight The value of "robotoTextWeight" attribute
+     * @param textStyle  The value of "robotoTextStyle" attribute
      * @return specify {@link Typeface} or throws IllegalArgumentException.
      */
     @NonNull
@@ -210,8 +210,8 @@ public final class RobotoTypefaces {
                         typeface = TYPEFACE_ROBOTO_BLACK;
                         break;
                     default:
-                        throw new IllegalArgumentException("`textWeight` attribute value " + textWeight +
-                                " is not supported for this font family " + fontFamily +
+                        throw new IllegalArgumentException("`robotoTextWeight` attribute value " + textWeight +
+                                " is not supported for this fontFamily " + fontFamily +
                                 " and textStyle " + textStyle);
                 }
             } else if (textStyle == TEXT_STYLE_ITALIC) {
@@ -235,12 +235,12 @@ public final class RobotoTypefaces {
                         typeface = TYPEFACE_ROBOTO_BLACK_ITALIC;
                         break;
                     default:
-                        throw new IllegalArgumentException("`textWeight` attribute value " + textWeight +
-                                " is not supported for this font family " + fontFamily +
+                        throw new IllegalArgumentException("`robotoTextWeight` attribute value " + textWeight +
+                                " is not supported for this fontFamily " + fontFamily +
                                 " and textStyle " + textStyle);
                 }
             } else {
-                throw new IllegalArgumentException("`textStyle` attribute value " + textStyle +
+                throw new IllegalArgumentException("`robotoTextStyle` attribute value " + textStyle +
                         " is not supported for this fontFamily " + fontFamily);
             }
         } else if (fontFamily == FONT_FAMILY_ROBOTO_CONDENSED) {
@@ -256,8 +256,8 @@ public final class RobotoTypefaces {
                         typeface = TYPEFACE_ROBOTO_CONDENSED_BOLD;
                         break;
                     default:
-                        throw new IllegalArgumentException("`textWeight` attribute value " + textWeight +
-                                " is not supported for this font family " + fontFamily +
+                        throw new IllegalArgumentException("`robotoTextWeight` attribute value " + textWeight +
+                                " is not supported for this fontFamily " + fontFamily +
                                 " and textStyle " + textStyle);
                 }
             } else if (textStyle == TEXT_STYLE_ITALIC) {
@@ -272,12 +272,12 @@ public final class RobotoTypefaces {
                         typeface = TYPEFACE_ROBOTO_CONDENSED_BOLD_ITALIC;
                         break;
                     default:
-                        throw new IllegalArgumentException("`textWeight` attribute value " + textWeight +
-                                " is not supported for this font family " + fontFamily +
+                        throw new IllegalArgumentException("`robotoTextWeight` attribute value " + textWeight +
+                                " is not supported for this fontFamily " + fontFamily +
                                 " and textStyle " + textStyle);
                 }
             } else {
-                throw new IllegalArgumentException("`textStyle` attribute value " + textStyle +
+                throw new IllegalArgumentException("`robotoTextStyle` attribute value " + textStyle +
                         " is not supported for this fontFamily " + fontFamily);
             }
         } else if (fontFamily == FONT_FAMILY_ROBOTO_SLAB) {
@@ -296,12 +296,12 @@ public final class RobotoTypefaces {
                         typeface = TYPEFACE_ROBOTO_SLAB_BOLD;
                         break;
                     default:
-                        throw new IllegalArgumentException("`textWeight` attribute value " + textWeight +
-                                " is not supported for this font family " + fontFamily +
+                        throw new IllegalArgumentException("`robotoTextWeight` attribute value " + textWeight +
+                                " is not supported for this fontFamily " + fontFamily +
                                 " and textStyle " + textStyle);
                 }
             } else {
-                throw new IllegalArgumentException("`textStyle` attribute value " + textStyle +
+                throw new IllegalArgumentException("`robotoTextStyle` attribute value " + textStyle +
                         " is not supported for this fontFamily " + fontFamily);
             }
         } else if (fontFamily == FONT_FAMILY_ROBOTO_MONO) {
@@ -323,8 +323,8 @@ public final class RobotoTypefaces {
                         typeface = TYPEFACE_ROBOTO_MONO_BOLD;
                         break;
                     default:
-                        throw new IllegalArgumentException("`textWeight` attribute value " + textWeight +
-                                " is not supported for this font family " + fontFamily +
+                        throw new IllegalArgumentException("`robotoTextWeight` attribute value " + textWeight +
+                                " is not supported for this fontFamily " + fontFamily +
                                 " and textStyle " + textStyle);
                 }
             } else if (textStyle == TEXT_STYLE_ITALIC) {
@@ -345,16 +345,16 @@ public final class RobotoTypefaces {
                         typeface = TYPEFACE_ROBOTO_MONO_BOLD_ITALIC;
                         break;
                     default:
-                        throw new IllegalArgumentException("`textWeight` attribute value " + textWeight +
-                                " is not supported for this font family " + fontFamily +
+                        throw new IllegalArgumentException("`robotoTextWeight` attribute value " + textWeight +
+                                " is not supported for this fontFamily " + fontFamily +
                                 " and textStyle " + textStyle);
                 }
             } else {
-                throw new IllegalArgumentException("`textStyle` attribute value " + textStyle +
+                throw new IllegalArgumentException("`robotoTextStyle` attribute value " + textStyle +
                         " is not supported for this fontFamily " + fontFamily);
             }
         } else {
-            throw new IllegalArgumentException("Unknown `fontFamily` attribute value " + fontFamily);
+            throw new IllegalArgumentException("Unknown `robotoFontFamily` attribute value " + fontFamily);
         }
         return obtainTypeface(context, typeface);
     }
@@ -364,8 +364,8 @@ public final class RobotoTypefaces {
      *
      * @param context  The Context the widget is running in, through which it can
      *                 access the current theme, resources, etc.
-     * @param typeface The value of "typeface" attribute
-     * @return Roboto {@link Typeface} or throws IllegalArgumentException if unknown `typeface` attribute value.
+     * @param typeface The value of "robotoTypeface" attribute
+     * @return Roboto {@link Typeface} or throws IllegalArgumentException if unknown `robotoTypeface` attribute value.
      */
     @NonNull
     private static Typeface createTypeface(@NonNull Context context, @RobotoTypeface int typeface) {
@@ -468,7 +468,7 @@ public final class RobotoTypefaces {
                 path = "fonts/RobotoMono-BoldItalic.ttf";
                 break;
             default:
-                throw new IllegalArgumentException("Unknown `typeface` attribute value " + typeface);
+                throw new IllegalArgumentException("Unknown `robotoTypeface` attribute value " + typeface);
         }
         return Typeface.createFromAsset(context.getAssets(), path);
     }
@@ -482,13 +482,13 @@ public final class RobotoTypefaces {
      */
     @NonNull
     public static Typeface obtainTypeface(@NonNull Context context, @NonNull TypedArray attrs) {
-        if (attrs.hasValue(R.styleable.RobotoTextView_typeface)) {
-            @RobotoTypeface int typefaceValue = attrs.getInt(R.styleable.RobotoTextView_typeface, TYPEFACE_ROBOTO_REGULAR);
+        if (attrs.hasValue(R.styleable.RobotoTextView_robotoTypeface)) {
+            @RobotoTypeface int typefaceValue = attrs.getInt(R.styleable.RobotoTextView_robotoTypeface, TYPEFACE_ROBOTO_REGULAR);
             return obtainTypeface(context, typefaceValue);
         } else {
-            @RobotoFontFamily int fontFamily = attrs.getInt(R.styleable.RobotoTextView_fontFamily, FONT_FAMILY_ROBOTO);
-            @RobotoTextWeight int textWeight = attrs.getInt(R.styleable.RobotoTextView_textWeight, TEXT_WEIGHT_NORMAL);
-            @RobotoTextStyle int textStyle = attrs.getInt(R.styleable.RobotoTextView_textStyle, TEXT_STYLE_NORMAL);
+            @RobotoFontFamily int fontFamily = attrs.getInt(R.styleable.RobotoTextView_robotoFontFamily, FONT_FAMILY_ROBOTO);
+            @RobotoTextWeight int textWeight = attrs.getInt(R.styleable.RobotoTextView_robotoTextWeight, TEXT_WEIGHT_NORMAL);
+            @RobotoTextStyle int textStyle = attrs.getInt(R.styleable.RobotoTextView_robotoTextStyle, TEXT_STYLE_NORMAL);
             return obtainTypeface(context, fontFamily, textWeight, textStyle);
         }
     }
@@ -520,7 +520,7 @@ public final class RobotoTypefaces {
      * Set up typeface for TextView.
      *
      * @param textView The text view
-     * @param typeface The value of "typeface" attribute
+     * @param typeface The value of "robotoTypeface" attribute
      */
     public static void setUpTypeface(@NonNull TextView textView, @RobotoTypeface int typeface) {
         setUpTypeface(textView, obtainTypeface(textView.getContext(), typeface));
@@ -530,9 +530,9 @@ public final class RobotoTypefaces {
      * Set up typeface for TextView.
      *
      * @param textView The text view
-     * @param fontFamily The value of "fontFamily" attribute
-     * @param textWeight The value of "textWeight" attribute
-     * @param textStyle  The value of "textStyle" attribute
+     * @param fontFamily The value of "robotoFontFamily" attribute
+     * @param textWeight The value of "robotoTextWeight" attribute
+     * @param textStyle  The value of "robotoTextStyle" attribute
      */
     public static void setUpTypeface(@NonNull TextView textView, @RobotoFontFamily int fontFamily,
             @RobotoTextWeight int textWeight, @RobotoTextStyle int textStyle) {

@@ -20,10 +20,16 @@ Supported fonts:
 </a>
 
 
+Deprecated :cry:
+----------
+
+This project is deprecated in favor of the [native implementation](https://developer.android.com/preview/features/fonts-in-xml.html) introduced in Android O.
+
+
 Compatibility
 -------------
 
-This library is compatible from API 9 (Android 2.3).
+This library is compatible from API 14 (Android 4.0).
 
 
 Download
@@ -32,7 +38,7 @@ Download
 Gradle:
 
 ```groovy
-compile 'com.github.johnkil.android-robototextview:robototextview:3.0.0'
+compile 'com.github.johnkil.android-robototextview:robototextview:4.0.0'
 ```
 
 Maven:
@@ -41,7 +47,7 @@ Maven:
 <dependency>
     <groupId>com.github.johnkil.android-robototextview</groupId>
     <artifactId>robototextview</artifactId>
-    <version>3.0.0</version>
+    <version>4.0.0</version>
     <type>aar</type>
 </dependency>
 ```
@@ -52,7 +58,7 @@ Usage
 
 #### In XML
 
-To set up a typeface you must specify the parameter `typeface`:
+To set up a typeface you must specify the parameter `robotoTypeface`:
 
 ``` xml
 <com.devspark.robototextview.widget.RobotoTextView
@@ -60,19 +66,19 @@ To set up a typeface you must specify the parameter `typeface`:
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:typeface="roboto_light_italic"/>
+    app:robotoTypeface="roboto_light_italic"/>
 ```
 
-or specify a set of parameters `fontFamily`, `textWeight` and `textStyle`:
+or specify a set of parameters `robotoFontFamily`, `robotoTextWeight` and `robotoTextStyle`:
 ``` xml
 <com.devspark.robototextview.widget.RobotoTextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:fontFamily="roboto"
-    app:textWeight="light"
-    app:textStyle="italic"/>
+    app:robotoFontFamily="roboto"
+    app:robotoTextWeight="light"
+    app:robotoTextStyle="italic"/>
 ```
 
 Set up typeface in code:
@@ -137,7 +143,7 @@ and specify the typeface in xml:
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:typeface="roboto_light_italic"
+    app:robotoTypeface="roboto_light_italic"
     tools:ignore="MissingPrefix"/>
 ```
 
@@ -159,7 +165,7 @@ android.applicationVariants.all{ variant ->
                 if (file.getName().contains("RobotoSlab")) {
                     println("delete " + file.getName() + " font")
                     file.delete()
-                };
+                }
             }
         }
     }

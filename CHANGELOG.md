@@ -2,6 +2,17 @@ Change Log
 ==========
 
 
+## Version 4.0.0
+
+_2017-07-26_
+
+ * Support AppCompat v26.0.0. Changed attribute names:
+    - `typeface` -> `robotoTypeface`
+    - `fontFamily` -> `robotoFontFamily`
+    - `textWeight` -> `robotoTextWeight`
+    - `textStyle` -> `robotoTextStyle`
+
+
 ## Version 3.0.0
 
 _2017-02-14_

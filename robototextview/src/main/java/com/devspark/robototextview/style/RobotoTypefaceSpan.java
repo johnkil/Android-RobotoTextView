@@ -39,7 +39,7 @@ public class RobotoTypefaceSpan extends MetricAffectingSpan {
      *
      * @param context  The Context the span is using in, through which it can
      *                 access the current theme, resources, etc.
-     * @param typeface The value of "typeface" attribute
+     * @param typeface The value of "robotoTypeface" attribute
      */
     public RobotoTypefaceSpan(Context context, @RobotoTypeface int typeface) {
         this.typeface = RobotoTypefaces.obtainTypeface(context, typeface);
@@ -50,9 +50,9 @@ public class RobotoTypefaceSpan extends MetricAffectingSpan {
      *
      * @param context    The Context the span is using in, through which it can
      *                   access the current theme, resources, etc.
-     * @param fontFamily The value of "fontFamily" attribute
-     * @param textWeight The value of "textWeight" attribute
-     * @param textStyle  The value of "textStyle" attribute
+     * @param fontFamily The value of "robotoFontFamily" attribute
+     * @param textWeight The value of "robotoTextWeight" attribute
+     * @param textStyle  The value of "robotoTextStyle" attribute
      */
     public RobotoTypefaceSpan(Context context, @RobotoFontFamily int fontFamily,
             @RobotoTextWeight int textWeight, @RobotoTextStyle int textStyle) {

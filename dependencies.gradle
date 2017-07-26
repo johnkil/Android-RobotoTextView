@@ -1,14 +1,14 @@
 ext.versions = [
-        minSdk              : 9,
-        targetSdk           : 25,
-        compileSdk          : 25,
-        buildTools          : '25.0.2',
+        minSdk              : 14,
+        targetSdk           : 26,
+        compileSdk          : 26,
+        buildTools          : '26.0.1',
 
-        androidGradlePlugin : '2.3.0-beta3',
-        versionsGradlePlugin: '0.14.0',
+        androidGradlePlugin : '2.3.3',
+        versionsGradlePlugin: '0.15.0',
 
         junit               : '4.12',
-        supportLib          : '25.1.1'
+        supportLib          : '26.0.0'
 ]
 
 ext.gradlePlugins = [
